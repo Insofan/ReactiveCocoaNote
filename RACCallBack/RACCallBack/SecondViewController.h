@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <ReactiveCocoa.h>
 @interface SecondViewController : UIViewController
-
+@property (strong, nonatomic) RACSubject *subject;
 @end
