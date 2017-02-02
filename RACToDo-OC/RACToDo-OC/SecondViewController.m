@@ -48,13 +48,21 @@
 }
 
 - (void)initBind {
+    [self.textField.rac_textSignal subscribeNext:^(NSString *text) {
+        NSLog(@"reactive %@", text);
+        [self textField:text];
+    }];
     @weakify(self);
     [[_saveButton rac_signalForControlEvents: UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         [self.name sendNext:self.textField.text] ;
+        NSLog(@"touch");
     }];
 }
 
+- (void)textField:(NSString *)text{
+    NSLog(@"%@", text);
+}
 - (void)viewDidLoad {
     [self setupUI];
     [self initBind];
