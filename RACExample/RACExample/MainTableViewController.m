@@ -8,6 +8,7 @@
 
 #import "MainTableViewController.h"
 #import "AddNumberViewController.h"
+#import "LoginViewController.h"
 
 @interface MainTableViewController ()
 @property (copy, nonatomic) NSArray *vcArray;
@@ -20,7 +21,7 @@
 {
     self = [super init];
     if (self) {
-        self.vcArray = @[@"Add Numbers"];
+        self.vcArray = @[@"Add Numbers", @"Simple validation"];
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ReuseCell];
     }
     return self;
@@ -51,7 +52,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ReuseCell];
-    cell.textLabel.text = self.vcArray[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",indexPath.row+1, self.vcArray[indexPath.row]];
     return cell;
 }
 
@@ -59,6 +60,10 @@
    
     if (indexPath.row == 0) {
         AddNumberViewController *vc = [AddNumberViewController new];
+        vc.title = self.vcArray[indexPath.row];
+        [self.navigationController pushViewController:vc animated:true];
+    } else if (indexPath.row == 1) {
+        LoginViewController *vc = [LoginViewController new];
         vc.title = self.vcArray[indexPath.row];
         [self.navigationController pushViewController:vc animated:true];
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3697B51E446407009C5999 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3697B41E446407009C5999 /* LoginViewController.m */; };
 		AF9B331D1E4385CD0031DF5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B331C1E4385CD0031DF5B /* main.m */; };
 		AF9B33201E4385CD0031DF5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B331F1E4385CD0031DF5B /* AppDelegate.m */; };
 		AF9B33281E4385CD0031DF5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9B33271E4385CD0031DF5B /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		02D84EAE9602782D007DE3D0 /* Pods-RACExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACExample/Pods-RACExample.debug.xcconfig"; sourceTree = "<group>"; };
 		4E931184B8F00A3587A4C109 /* libPods-RACExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3697B31E446407009C5999 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		AF3697B41E446407009C5999 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		AF9B33181E4385CD0031DF5B /* RACExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9B331C1E4385CD0031DF5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF9B331E1E4385CD0031DF5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +58,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF3697B21E4463E3009C5999 /* Simple Validation */ = {
+			isa = PBXGroup;
+			children = (
+				AF3697B31E446407009C5999 /* LoginViewController.h */,
+				AF3697B41E446407009C5999 /* LoginViewController.m */,
+			);
+			name = "Simple Validation";
+			sourceTree = "<group>";
+		};
 		AF9B330F1E4385CD0031DF5B = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +93,8 @@
 				AF9B33351E4388A30031DF5B /* Header.pch */,
 				AF9B33321E4385FA0031DF5B /* MainTableViewController.h */,
 				AF9B33331E4385FA0031DF5B /* MainTableViewController.m */,
-				AF9B33391E438A750031DF5B /* AddNumber */,
+				AF3697B21E4463E3009C5999 /* Simple Validation */,
+				AF9B33391E438A750031DF5B /* AddNumbers */,
 				AF9B331B1E4385CD0031DF5B /* Supporting Files */,
 			);
 			path = RACExample;
@@ -98,13 +111,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AF9B33391E438A750031DF5B /* AddNumber */ = {
+		AF9B33391E438A750031DF5B /* AddNumbers */ = {
 			isa = PBXGroup;
 			children = (
 				AF9B33361E438A6F0031DF5B /* AddNumberViewController.h */,
 				AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */,
 			);
-			name = AddNumber;
+			name = AddNumbers;
 			sourceTree = "<group>";
 		};
 		C17EC9024BE84157A4AC88BA /* Frameworks */ = {
@@ -241,6 +254,7 @@
 				AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */,
 				AF9B33201E4385CD0031DF5B /* AppDelegate.m in Sources */,
 				AF9B331D1E4385CD0031DF5B /* main.m in Sources */,
+				AF3697B51E446407009C5999 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
