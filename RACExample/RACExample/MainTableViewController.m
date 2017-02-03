@@ -9,6 +9,7 @@
 #import "MainTableViewController.h"
 #import "AddNumberViewController.h"
 #import "LoginViewController.h"
+#import "FirstViewController.h"
 
 @interface MainTableViewController ()
 @property (copy, nonatomic) NSArray *vcArray;
@@ -21,7 +22,7 @@
 {
     self = [super init];
     if (self) {
-        self.vcArray = @[@"Add Numbers", @"Simple validation"];
+        self.vcArray = @[@"Add Numbers", @"Simple validation", @"Call Back"];
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ReuseCell];
     }
     return self;
@@ -64,6 +65,10 @@
         [self.navigationController pushViewController:vc animated:true];
     } else if (indexPath.row == 1) {
         LoginViewController *vc = [LoginViewController new];
+        vc.title = self.vcArray[indexPath.row];
+        [self.navigationController pushViewController:vc animated:true];
+    } else if (indexPath.row == 2) {
+        FirstViewController *vc = [FirstViewController new];
         vc.title = self.vcArray[indexPath.row];
         [self.navigationController pushViewController:vc animated:true];
     }
