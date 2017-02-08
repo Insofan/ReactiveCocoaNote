@@ -11,4 +11,5 @@ pod 'ReactiveCocoa', '2.5'
 pod 'FMDB'
 pod 'AFNetworking'
 pod 'YYModel'
+pod 'JGProgressHUD'
 end

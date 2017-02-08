@@ -43,12 +43,15 @@
 
 
 - (void)barButtonAction {
+    @weakify(self)
     SecondViewController *vc = [SecondViewController new];
     [self.navigationController pushViewController:vc animated:true];
     //2. alloc init subject
     vc.subject = [RACSubject subject];
     //3. subscribeNext 订阅
     [vc.subject subscribeNext:^(NSString* text) {
+        @strongify(self)
+        //其实没必要写
         self.label.text = text;
 //        [self.label setText:text];
     }];

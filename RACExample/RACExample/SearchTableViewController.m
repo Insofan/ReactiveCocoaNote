@@ -10,12 +10,15 @@
 #import <AFNetworking.h>
 #import "UserModel.h"
 #import <YYModel.h>
+#import <JGProgressHUD.h>
 @interface SearchTableViewController ()
 @property (strong, nonatomic) UIView      *titleView;
 @property (strong, nonatomic) UITextField *searchTextField;
+@property (strong, nonatomic) JGProgressHUD *hud;
 
 @property (strong, nonatomic) NSMutableArray <UserModel*> *dataArray;
 @property (strong, nonatomic) UserModel *userModel;
+
 
 @end
 
@@ -36,6 +39,8 @@
         _searchTextField.placeholder = @"Enter Username";
         _searchTextField;
     });
+    
+    
     
     self.navigationItem.titleView = self.titleView;
     
@@ -91,6 +96,9 @@
     NSString *url = [[NSString  alloc] initWithFormat: @"https://api.github.com/search/users?q=%@&page=1", name];
     NSString *searchString = [url stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSLog(@"%@", searchString);
+    
+    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    [HUD showInView:self.view];
    
     [manager GET:searchString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *items = responseObject[@"items"];
@@ -98,10 +106,16 @@
             self.userModel = [UserModel yy_modelWithDictionary:item];
             [self.dataArray addObject:self.userModel];
         }
-        NSLog(@"%@", self.dataArray);
+        [HUD dismissAnimated:true];
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"no more data");
+        [HUD dismiss];
+        //error hud
+        JGProgressHUD *errorHud = [JGProgressHUD progressHUDWithStyle: JGProgressHUDStyleLight];
+        errorHud.textLabel.text = @"Error";
+        errorHud.indicatorView = [[JGProgressHUDErrorIndicatorView alloc] init]; //JGProgressHUDSuccessIndicatorView is also available
+        [errorHud showInView:self.view];
+        [errorHud dismissAfterDelay:2.0 animated:true];
     }];
   
 }
