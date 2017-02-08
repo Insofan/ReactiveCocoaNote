@@ -16,6 +16,8 @@
 		AF9B332B1E4385CD0031DF5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9B33291E4385CD0031DF5B /* LaunchScreen.storyboard */; };
 		AF9B33341E4385FA0031DF5B /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B33331E4385FA0031DF5B /* MainTableViewController.m */; };
 		AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */; };
+		AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA6D7A41E45B47D00FA4CC3 /* UserModel.m */; };
+		AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF6610A1E449D260087CC8F /* SearchTableViewController.m */; };
 		F15391DEB3C23A9797BEE8AA /* libPods-RACExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E931184B8F00A3587A4C109 /* libPods-RACExample.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,10 @@
 		AF9B33351E4388A30031DF5B /* Header.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
 		AF9B33361E438A6F0031DF5B /* AddNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNumberViewController.h; sourceTree = "<group>"; };
 		AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNumberViewController.m; sourceTree = "<group>"; };
+		AFA6D7A31E45B47D00FA4CC3 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		AFA6D7A41E45B47D00FA4CC3 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		AFF661091E449D260087CC8F /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		AFF6610A1E449D260087CC8F /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		DACAE99B8B63D3A4CE77267E /* Pods-RACExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACExample/Pods-RACExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +84,10 @@
 		AF087FF81E449BF2009F5B66 /* Search GitHub */ = {
 			isa = PBXGroup;
 			children = (
+				AFF661091E449D260087CC8F /* SearchTableViewController.h */,
+				AFF6610A1E449D260087CC8F /* SearchTableViewController.m */,
+				AFA6D7A31E45B47D00FA4CC3 /* UserModel.h */,
+				AFA6D7A41E45B47D00FA4CC3 /* UserModel.m */,
 			);
 			name = "Search GitHub";
 			sourceTree = "<group>";
@@ -279,10 +289,12 @@
 				AF9B33341E4385FA0031DF5B /* MainTableViewController.m in Sources */,
 				AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */,
 				AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */,
+				AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */,
 				AF087FF71E44905D009F5B66 /* SecondViewController.m in Sources */,
 				AF9B33201E4385CD0031DF5B /* AppDelegate.m in Sources */,
 				AF9B331D1E4385CD0031DF5B /* main.m in Sources */,
 				AF3697B51E446407009C5999 /* LoginViewController.m in Sources */,
+				AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

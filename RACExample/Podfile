@@ -10,4 +10,5 @@ pod 'Masonry'
 pod 'ReactiveCocoa', '2.5'
 pod 'FMDB'
 pod 'AFNetworking'
+pod 'YYModel'
 end

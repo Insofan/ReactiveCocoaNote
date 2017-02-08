@@ -10,6 +10,7 @@
 #import "AddNumberViewController.h"
 #import "LoginViewController.h"
 #import "FirstViewController.h"
+#import "SearchTableViewController.h"
 
 @interface MainTableViewController ()
 @property (copy, nonatomic) NSArray *vcArray;
@@ -22,19 +23,14 @@
 {
     self = [super init];
     if (self) {
-        self.vcArray = @[@"Add Numbers", @"Simple validation", @"Call Back"];
+        self.vcArray = @[@"Add Numbers", @"Simple validation", @"Call Back", @"Search GitHub"];
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ReuseCell];
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
     self.view.backgroundColor = [UIColor redColor];
     
 }
@@ -71,9 +67,9 @@
         FirstViewController *vc = [FirstViewController new];
         vc.title = self.vcArray[indexPath.row];
         [self.navigationController pushViewController:vc animated:true];
+    } else if (indexPath.row == 3) {
+        SearchTableViewController *vc = [SearchTableViewController new];
+        [self.navigationController pushViewController:vc animated:true];
     }
 }
-
-
-
 @end
