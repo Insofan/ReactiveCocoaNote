@@ -7,3 +7,5 @@
 
 1. Add Numbers (实时三个数字相加)
 2. Simple Validation(简单的登录验证)
+3. Call Back(冷信号，页面间回调传值)
+4. Search GitHub(输入文字自动搜索)
