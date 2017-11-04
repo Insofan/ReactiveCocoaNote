@@ -11,19 +11,34 @@
 #import "LoginViewController.h"
 #import "FirstViewController.h"
 #import "SearchTableViewController.h"
+#import "FmdbRacViewController.h"
 
 @interface MainTableViewController ()
-@property (copy, nonatomic) NSArray *vcArray;
+@property (strong, nonatomic) NSArray *vcArray;
 @end
 
 @implementation MainTableViewController
+
+- (NSArray *)vcArray {
+    if (!_vcArray) {
+        
+        _vcArray = @[
+                     @{@"key":@"1 加法计数器", @"value":[AddNumberViewController class]},
+                     @{@"key":@"2 登录界面", @"value":[LoginViewController class]},
+                     @{@"key":@"3 Callback", @"value":[FirstViewController class]},
+                     @{@"key":@"4 搜索界面", @"value":[SearchTableViewController class]},
+                     @{@"key":@"5 FMDB应用", @"value":[FmdbRacViewController class]}
+                        ];
+        
+    }
+    return _vcArray;
+}
 
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        self.vcArray = @[@"Add Numbers", @"Simple validation", @"Call Back", @"Search GitHub"];
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ReuseCell];
     }
     return self;
@@ -33,7 +48,7 @@
 
     self.view.backgroundColor = [UIColor redColor];
     self.navigationItem.title = @"RAC Example";
-    
+
 }
 
 
@@ -50,27 +65,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ReuseCell];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",indexPath.row+1, self.vcArray[indexPath.row]];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ReuseCell];
+    cell.textLabel.text = self.vcArray[indexPath.row][@"key"];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
    
-    if (indexPath.row == 0) {
-        AddNumberViewController *vc = [AddNumberViewController new];
-        vc.title = self.vcArray[indexPath.row];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (indexPath.row == 1) {
-        LoginViewController *vc = [LoginViewController new];
-        vc.title = self.vcArray[indexPath.row];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (indexPath.row == 2) {
-        FirstViewController *vc = [FirstViewController new];
-        vc.title = self.vcArray[indexPath.row];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (indexPath.row == 3) {
-        SearchTableViewController *vc = [SearchTableViewController new];
-        [self.navigationController pushViewController:vc animated:true];
-    }
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+
+    UIViewController *vcArray = [[self.vcArray[indexPath.row][@"value"] alloc] init];
+    vcArray.title = self.vcArray[indexPath.row][@"key"];
+    [self.navigationController pushViewController:vcArray animated:true];
 }
 @end

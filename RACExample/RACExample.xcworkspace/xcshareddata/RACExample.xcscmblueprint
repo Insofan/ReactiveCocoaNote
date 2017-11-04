@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3D60F6991B6A1F18E21B7386D91C5D1A3406F4D3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3D60F6991B6A1F18E21B7386D91C5D1A3406F4D3" : 9223372036854775807,
+    "380E819D9EB4857AB7BA597DEB331040AD8C3D8C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4281B85B-20B8-4704-ACBD-0E8A3D387B78",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3D60F6991B6A1F18E21B7386D91C5D1A3406F4D3" : "ReactiveCocoaNote\/",
+    "380E819D9EB4857AB7BA597DEB331040AD8C3D8C" : "HXTool\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RACExample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RACExample\/RACExample.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Insofan\/HXTool.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "380E819D9EB4857AB7BA597DEB331040AD8C3D8C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Insofan\/ReactiveCocoaNote.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3D60F6991B6A1F18E21B7386D91C5D1A3406F4D3"
+    }
+  ]
+}

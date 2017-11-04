@@ -17,6 +17,8 @@
 		AF9B33341E4385FA0031DF5B /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B33331E4385FA0031DF5B /* MainTableViewController.m */; };
 		AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */; };
 		AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA6D7A41E45B47D00FA4CC3 /* UserModel.m */; };
+		AFAF88DB1FADD3C9004754DD /* FmdbRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */; };
+		AFAF88DC1FADD3C9004754DD /* FmdbRacEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */; };
 		AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF6610A1E449D260087CC8F /* SearchTableViewController.m */; };
 		F15391DEB3C23A9797BEE8AA /* libPods-RACExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E931184B8F00A3587A4C109 /* libPods-RACExample.a */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,10 @@
 		AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNumberViewController.m; sourceTree = "<group>"; };
 		AFA6D7A31E45B47D00FA4CC3 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		AFA6D7A41E45B47D00FA4CC3 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		AFAF88D71FADD3C8004754DD /* FmdbRacEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbRacEditViewController.h; sourceTree = "<group>"; };
+		AFAF88D81FADD3C9004754DD /* FmdbRacViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbRacViewController.h; sourceTree = "<group>"; };
+		AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbRacViewController.m; sourceTree = "<group>"; };
+		AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbRacEditViewController.m; sourceTree = "<group>"; };
 		AFF661091E449D260087CC8F /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
 		AFF6610A1E449D260087CC8F /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		DACAE99B8B63D3A4CE77267E /* Pods-RACExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACExample/Pods-RACExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				AF9B331F1E4385CD0031DF5B /* AppDelegate.m */,
 				AF9B33321E4385FA0031DF5B /* MainTableViewController.h */,
 				AF9B33331E4385FA0031DF5B /* MainTableViewController.m */,
+				AFAF88D61FADD3B5004754DD /* FMDB */,
 				AF087FF81E449BF2009F5B66 /* Search GitHub */,
 				AF087FF11E449038009F5B66 /* CallBack */,
 				AF3697B21E4463E3009C5999 /* Simple Login */,
@@ -154,6 +161,17 @@
 				AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */,
 			);
 			name = AddNumbers;
+			sourceTree = "<group>";
+		};
+		AFAF88D61FADD3B5004754DD /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				AFAF88D71FADD3C8004754DD /* FmdbRacEditViewController.h */,
+				AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */,
+				AFAF88D81FADD3C9004754DD /* FmdbRacViewController.h */,
+				AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */,
+			);
+			name = FMDB;
 			sourceTree = "<group>";
 		};
 		C17EC9024BE84157A4AC88BA /* Frameworks */ = {
@@ -193,7 +211,7 @@
 		AF9B33101E4385CD0031DF5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "海啸";
 				TargetAttributes = {
 					AF9B33171E4385CD0031DF5B = {
@@ -255,9 +273,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RACExample/Pods-RACExample-resources.sh",
+				"${PODS_ROOT}/JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUD Resources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -270,13 +291,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RACExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -287,7 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9B33341E4385FA0031DF5B /* MainTableViewController.m in Sources */,
+				AFAF88DC1FADD3C9004754DD /* FmdbRacEditViewController.m in Sources */,
 				AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */,
+				AFAF88DB1FADD3C9004754DD /* FmdbRacViewController.m in Sources */,
 				AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */,
 				AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */,
 				AF087FF71E44905D009F5B66 /* SecondViewController.m in Sources */,
@@ -321,7 +347,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -329,7 +357,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -352,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -368,7 +400,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -376,7 +410,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -393,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
