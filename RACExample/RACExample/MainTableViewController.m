@@ -7,6 +7,7 @@
 //
 
 #import "MainTableViewController.h"
+#import "RACBaseTableViewController.h"
 #import "AddNumberViewController.h"
 #import "LoginViewController.h"
 #import "FirstViewController.h"
@@ -21,13 +22,14 @@
 
 - (NSArray *)vcArray {
     if (!_vcArray) {
-        
+       
         _vcArray = @[
-                     @{@"key":@"1 加法计数器", @"value":[AddNumberViewController class]},
-                     @{@"key":@"2 登录界面", @"value":[LoginViewController class]},
-                     @{@"key":@"3 Callback", @"value":[FirstViewController class]},
-                     @{@"key":@"4 搜索界面", @"value":[SearchTableViewController class]},
-                     @{@"key":@"5 FMDB应用", @"value":[FmdbRacViewController class]}
+                     @{@"key":@"1 RAC 基础知识", @"value":[RACBaseTableViewController class]},
+                     @{@"key":@"2 加法计数器", @"value":[AddNumberViewController class]},
+                     @{@"key":@"3 登录界面", @"value":[LoginViewController class]},
+                     @{@"key":@"4 Callback", @"value":[FirstViewController class]},
+                     @{@"key":@"5 搜索界面", @"value":[SearchTableViewController class]},
+                     @{@"key":@"6 FMDB应用", @"value":[FmdbRacViewController class]}
                         ];
         
     }
@@ -46,7 +48,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor randomColor];
     self.navigationItem.title = @"RAC Example";
 
 }

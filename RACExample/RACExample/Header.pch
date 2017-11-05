@@ -12,10 +12,11 @@
 #define ReuseCell @"reuseIdentifier"
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
-#import <ReactiveObjC.h>
+#import <ReactiveCocoa.h>
 #import <Masonry.h>
 #import <FMDB.h>
 #import <HXTool.h>
+#import "Macros.h"
 #endif
 
 #endif /* Header_h */

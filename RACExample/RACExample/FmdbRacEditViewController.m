@@ -10,7 +10,7 @@
 
 @interface FmdbRacEditViewController ()
 
-@property (strong, readwrite, nonatomic) UITextView *textView;
+@property (strong, readwrite, nonatomic ) UITextView *textView;
 @property (strong, readwrite, nonatomic ) UIButton   *button;
 
 @end
@@ -98,6 +98,7 @@
         
         //pop后要在willAppear里面reloadData
         [self.navigationController popViewControllerAnimated:true];
+
         
     }];
         

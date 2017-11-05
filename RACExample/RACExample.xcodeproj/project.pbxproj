@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF087FF31E449050009F5B66 /* FirstViewController.m */; };
 		AF087FF71E44905D009F5B66 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF087FF61E44905D009F5B66 /* SecondViewController.m */; };
+		AF2199E91FAF709A0025B73A /* RACSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2199E81FAF70990025B73A /* RACSignalViewController.m */; };
 		AF3697B51E446407009C5999 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3697B41E446407009C5999 /* LoginViewController.m */; };
 		AF9B331D1E4385CD0031DF5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B331C1E4385CD0031DF5B /* main.m */; };
 		AF9B33201E4385CD0031DF5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B331F1E4385CD0031DF5B /* AppDelegate.m */; };
@@ -19,6 +20,7 @@
 		AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA6D7A41E45B47D00FA4CC3 /* UserModel.m */; };
 		AFAF88DB1FADD3C9004754DD /* FmdbRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */; };
 		AFAF88DC1FADD3C9004754DD /* FmdbRacEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */; };
+		AFE96A391FAF5BA500536984 /* RACBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE96A381FAF5BA500536984 /* RACBaseTableViewController.m */; };
 		AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF6610A1E449D260087CC8F /* SearchTableViewController.m */; };
 		F15391DEB3C23A9797BEE8AA /* libPods-RACExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E931184B8F00A3587A4C109 /* libPods-RACExample.a */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		AF087FF31E449050009F5B66 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		AF087FF51E44905D009F5B66 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		AF087FF61E44905D009F5B66 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		AF2199E71FAF70990025B73A /* RACSignalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACSignalViewController.h; sourceTree = "<group>"; };
+		AF2199E81FAF70990025B73A /* RACSignalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSignalViewController.m; sourceTree = "<group>"; };
 		AF3697B31E446407009C5999 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		AF3697B41E446407009C5999 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		AF9B33181E4385CD0031DF5B /* RACExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +54,9 @@
 		AFAF88D81FADD3C9004754DD /* FmdbRacViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbRacViewController.h; sourceTree = "<group>"; };
 		AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbRacViewController.m; sourceTree = "<group>"; };
 		AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbRacEditViewController.m; sourceTree = "<group>"; };
+		AFE96A371FAF5BA500536984 /* RACBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACBaseTableViewController.h; sourceTree = "<group>"; };
+		AFE96A381FAF5BA500536984 /* RACBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACBaseTableViewController.m; sourceTree = "<group>"; };
+		AFE96A3D1FAF5C8700536984 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		AFF661091E449D260087CC8F /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
 		AFF6610A1E449D260087CC8F /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		DACAE99B8B63D3A4CE77267E /* Pods-RACExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACExample/Pods-RACExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,10 +135,7 @@
 		AF9B331A1E4385CD0031DF5B /* RACExample */ = {
 			isa = PBXGroup;
 			children = (
-				AF9B331E1E4385CD0031DF5B /* AppDelegate.h */,
-				AF9B331F1E4385CD0031DF5B /* AppDelegate.m */,
-				AF9B33321E4385FA0031DF5B /* MainTableViewController.h */,
-				AF9B33331E4385FA0031DF5B /* MainTableViewController.m */,
+				AFE96A361FAF5B7700536984 /* RACBase */,
 				AFAF88D61FADD3B5004754DD /* FMDB */,
 				AF087FF81E449BF2009F5B66 /* Search GitHub */,
 				AF087FF11E449038009F5B66 /* CallBack */,
@@ -145,7 +149,12 @@
 		AF9B331B1E4385CD0031DF5B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF9B331E1E4385CD0031DF5B /* AppDelegate.h */,
+				AF9B331F1E4385CD0031DF5B /* AppDelegate.m */,
+				AF9B33321E4385FA0031DF5B /* MainTableViewController.h */,
+				AF9B33331E4385FA0031DF5B /* MainTableViewController.m */,
 				AF9B33351E4388A30031DF5B /* Header.pch */,
+				AFE96A3D1FAF5C8700536984 /* Macros.h */,
 				AF9B33271E4385CD0031DF5B /* Assets.xcassets */,
 				AF9B33291E4385CD0031DF5B /* LaunchScreen.storyboard */,
 				AF9B332C1E4385CD0031DF5B /* Info.plist */,
@@ -172,6 +181,17 @@
 				AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */,
 			);
 			name = FMDB;
+			sourceTree = "<group>";
+		};
+		AFE96A361FAF5B7700536984 /* RACBase */ = {
+			isa = PBXGroup;
+			children = (
+				AFE96A371FAF5BA500536984 /* RACBaseTableViewController.h */,
+				AFE96A381FAF5BA500536984 /* RACBaseTableViewController.m */,
+				AF2199E71FAF70990025B73A /* RACSignalViewController.h */,
+				AF2199E81FAF70990025B73A /* RACSignalViewController.m */,
+			);
+			name = RACBase;
 			sourceTree = "<group>";
 		};
 		C17EC9024BE84157A4AC88BA /* Frameworks */ = {
@@ -313,6 +333,8 @@
 				AF9B33341E4385FA0031DF5B /* MainTableViewController.m in Sources */,
 				AFAF88DC1FADD3C9004754DD /* FmdbRacEditViewController.m in Sources */,
 				AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */,
+				AF2199E91FAF709A0025B73A /* RACSignalViewController.m in Sources */,
+				AFE96A391FAF5BA500536984 /* RACBaseTableViewController.m in Sources */,
 				AFAF88DB1FADD3C9004754DD /* FmdbRacViewController.m in Sources */,
 				AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */,
 				AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */,

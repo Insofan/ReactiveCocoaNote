@@ -17,8 +17,14 @@
     return [UIScreen mainScreen].bounds.size.height;
 }
 
++ (CGRect )screenBounds {
+    return [[UIScreen mainScreen] bounds];
+}
+
 + (CGFloat )scale {
     return [UIScreen mainScreen].scale;
 }
+
+
 
 @end

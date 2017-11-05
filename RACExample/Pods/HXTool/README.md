@@ -34,6 +34,12 @@ or with RGB number
 self.view.backgroundColor = [UIColor colorWithRGBNumber:78 green:189 blue:151];
 ```
 
+also random color
+
+```
+self.view.backgroundColor = [UIColor randomColor];
+```
+
 2.UIButton
 
 ```
@@ -46,6 +52,15 @@ UIButton *button = [UIButton buttonWithTitle:@"button" fontSize:12 normalColor:[
 1.Screen Width and Screen Height
 view.frame = CGRectMake(100, 300, [UIScreen screenWidth]/2, [UIScreen screenHeight]/6);
 ```
+
+4.Macro
+
+```
+//App Version
+NSLog(@"app version: %@", AppVersion);
+```
+
+
 
 ## Author
 

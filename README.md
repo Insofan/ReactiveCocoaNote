@@ -5,7 +5,9 @@
 
 现在已经完成
 
-1. Add Numbers (实时三个数字相加)
-2. Simple Validation(简单的登录验证)
-3. Call Back(冷信号，页面间回调传值)
-4. Search GitHub(输入文字自动搜索)
+1. Reactive Cocoa基础知识
+2. Add Numbers (实时三个数字相加)
+3. Simple Validation(简单的登录验证)
+4. Call Back(冷信号，页面间回调传值)
+5. Search GitHub(输入文字自动搜索)
+6. FMDB的应用

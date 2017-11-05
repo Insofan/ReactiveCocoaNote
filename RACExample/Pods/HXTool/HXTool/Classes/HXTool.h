@@ -12,6 +12,7 @@
 #import "HXColorTool.h"
 #import "HXButtonTool.h"
 #import "HXScreenTool.h"
+#import "HXMacros.h"
 
 
 

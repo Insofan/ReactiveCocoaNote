@@ -12,6 +12,7 @@
 
 + (CGFloat )screenWidth;
 + (CGFloat )screenHeight;
++ (CGRect )screenBounds;
 
 + (CGFloat )scale;
 

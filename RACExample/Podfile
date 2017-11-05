@@ -7,10 +7,10 @@ target 'RACExample' do
 
   # Pods for RACExample
 pod 'Masonry'
-pod 'ReactiveObjC', ‘3.0’
+pod 'ReactiveCocoa', '2.5'
 pod 'FMDB'
 pod 'AFNetworking'
 pod 'YYModel'
 pod 'JGProgressHUD'
-pod 'HXTool'
+pod 'HXTool', '0.1.3'
 end
