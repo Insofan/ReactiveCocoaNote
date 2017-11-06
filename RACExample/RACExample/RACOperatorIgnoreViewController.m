@@ -16,6 +16,7 @@
 @end
 
 @implementation RACOperatorIgnoreViewController
+
 - (void)setupUI {
     
     self.textFieldOne = ({
@@ -48,7 +49,6 @@
         make.centerX.mas_equalTo(self.view);
         make.top.mas_equalTo(self.view.mas_top).mas_offset([UIScreen screenHeight]  * 2 / 5.0);
     }];
-    
 }
 
 - (void)viewDidLoad {

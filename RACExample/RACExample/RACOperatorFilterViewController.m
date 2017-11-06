@@ -65,9 +65,11 @@
 - (void)filter {
     //过滤信号，使用它可以获取满足条件的信号.是一个Bool值
     //当输入四个字符改变Label
+    @weakify(self);
     [[self.textFieldOne.rac_textSignal filter:^BOOL(id value) {
         return [value length] > 3;
     }] subscribeNext:^(NSString *text) {
+        @strongify(self);
         self.labelOne.text = text;
     }];
 

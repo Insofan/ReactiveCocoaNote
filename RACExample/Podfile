@@ -7,7 +7,7 @@ target 'RACExample' do
 
   # Pods for RACExample
 pod 'Masonry'
-pod 'ReactiveCocoa', '2.5'
+pod 'ReactiveObjC', '3.0'
 pod 'FMDB'
 pod 'AFNetworking'
 pod 'YYModel'

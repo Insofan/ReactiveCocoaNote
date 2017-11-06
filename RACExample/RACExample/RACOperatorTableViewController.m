@@ -83,6 +83,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     UIViewController *vc = [[self.vcArray[indexPath.row][@"value"] class] new];
+    vc.title = self.vcArray[indexPath.row][@"key"];
     [self.navigationController pushViewController:vc animated:true];
 }
 

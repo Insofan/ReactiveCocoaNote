@@ -11,6 +11,7 @@
 #import "RACSignalViewController.h"
 #import "RACSubjectViewController.h"
 #import "RACOperatorTableViewController.h"
+#import "RACMacroTableViewController.h"
 
 
 @interface RACBaseTableViewController ()
@@ -26,7 +27,8 @@
         _vcArray = @[
                      @{@"key":@"1 RACSignal", @"value":[RACSignalViewController class]},
                      @{@"key":@"2 RACSubject", @"value":[RACSubjectViewController class]},
-                     @{@"key":@"3 RACOperator", @"value":[RACOperatorTableViewController class]}
+                     @{@"key":@"3 RACOperator", @"value":[RACOperatorTableViewController class]},
+                     @{@"key":@"4 RACMacro", @"value":[RACMacroTableViewController class]}
                      ];
     }
     return _vcArray;
@@ -68,7 +70,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentify"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"baseReuse"];
 
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"baseReuse"];
     cell.textLabel.text = _vcArray[indexPath.row][@"key"];
@@ -80,6 +82,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     
     UIViewController *vc = [[_vcArray[indexPath.row][@"value"] class] new];
+    vc.title = self.vcArray[indexPath.row][@"key"];
     
     [self.navigationController pushViewController:vc animated:true];
 
