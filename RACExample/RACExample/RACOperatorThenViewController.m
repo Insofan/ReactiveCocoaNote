@@ -16,22 +16,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor randomColor];
+    
+    [self then];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)then {
+    
+    //then:用于连接两个信号，当第一个信号完成，才会连接then返回的信号,而第一个信号则会被忽略
+    RACSignal *signalOne = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"signal one"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    RACSignal *signalTwo = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"signal two"];
+        return [RACDisposable disposableWithBlock:^{
+            
+        }];
+    }];
+    
+    [[signalOne then:^RACSignal *{
+        return signalTwo;
+    }] subscribeNext:^(id x) {
+        NSLog(@"RACOperator concat: %@", x);
+    }];
+    
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

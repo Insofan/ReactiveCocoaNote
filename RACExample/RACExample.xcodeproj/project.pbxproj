@@ -23,6 +23,13 @@
 		AF9B332B1E4385CD0031DF5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9B33291E4385CD0031DF5B /* LaunchScreen.storyboard */; };
 		AF9B33341E4385FA0031DF5B /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B33331E4385FA0031DF5B /* MainTableViewController.m */; };
 		AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */; };
+		AFA365C11FB046C200914A6C /* RACOperatorThenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA365C01FB046C200914A6C /* RACOperatorThenViewController.m */; };
+		AFA365C51FB04CF400914A6C /* RACOperatorMergeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA365C41FB04CF400914A6C /* RACOperatorMergeViewController.m */; };
+		AFA365C91FB0519500914A6C /* RACOperatorZipWithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA365C81FB0519500914A6C /* RACOperatorZipWithViewController.m */; };
+		AFA365CD1FB0584700914A6C /* RACOperatorCombineLatestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA365CC1FB0584700914A6C /* RACOperatorCombineLatestViewController.m */; };
+		AFA365D11FB05B6E00914A6C /* RACOperatorReduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA365D01FB05B6E00914A6C /* RACOperatorReduceViewController.m */; };
+		AFA365D51FB0614F00914A6C /* RACOperatorFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA365D41FB0614F00914A6C /* RACOperatorFilterViewController.m */; };
+		AFA365D91FB066D300914A6C /* RACOperatorIgnoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA365D81FB066D300914A6C /* RACOperatorIgnoreViewController.m */; };
 		AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA6D7A41E45B47D00FA4CC3 /* UserModel.m */; };
 		AFAF88DB1FADD3C9004754DD /* FmdbRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */; };
 		AFAF88DC1FADD3C9004754DD /* FmdbRacEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */; };
@@ -65,6 +72,20 @@
 		AF9B33351E4388A30031DF5B /* Header.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
 		AF9B33361E438A6F0031DF5B /* AddNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNumberViewController.h; sourceTree = "<group>"; };
 		AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNumberViewController.m; sourceTree = "<group>"; };
+		AFA365BF1FB046C200914A6C /* RACOperatorThenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorThenViewController.h; sourceTree = "<group>"; };
+		AFA365C01FB046C200914A6C /* RACOperatorThenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorThenViewController.m; sourceTree = "<group>"; };
+		AFA365C31FB04CF400914A6C /* RACOperatorMergeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorMergeViewController.h; sourceTree = "<group>"; };
+		AFA365C41FB04CF400914A6C /* RACOperatorMergeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorMergeViewController.m; sourceTree = "<group>"; };
+		AFA365C71FB0519500914A6C /* RACOperatorZipWithViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorZipWithViewController.h; sourceTree = "<group>"; };
+		AFA365C81FB0519500914A6C /* RACOperatorZipWithViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorZipWithViewController.m; sourceTree = "<group>"; };
+		AFA365CB1FB0584700914A6C /* RACOperatorCombineLatestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorCombineLatestViewController.h; sourceTree = "<group>"; };
+		AFA365CC1FB0584700914A6C /* RACOperatorCombineLatestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorCombineLatestViewController.m; sourceTree = "<group>"; };
+		AFA365CF1FB05B6E00914A6C /* RACOperatorReduceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorReduceViewController.h; sourceTree = "<group>"; };
+		AFA365D01FB05B6E00914A6C /* RACOperatorReduceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorReduceViewController.m; sourceTree = "<group>"; };
+		AFA365D31FB0614F00914A6C /* RACOperatorFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorFilterViewController.h; sourceTree = "<group>"; };
+		AFA365D41FB0614F00914A6C /* RACOperatorFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorFilterViewController.m; sourceTree = "<group>"; };
+		AFA365D71FB066D300914A6C /* RACOperatorIgnoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorIgnoreViewController.h; sourceTree = "<group>"; };
+		AFA365D81FB066D300914A6C /* RACOperatorIgnoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorIgnoreViewController.m; sourceTree = "<group>"; };
 		AFA6D7A31E45B47D00FA4CC3 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		AFA6D7A41E45B47D00FA4CC3 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		AFAF88D71FADD3C8004754DD /* FmdbRacEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbRacEditViewController.h; sourceTree = "<group>"; };
@@ -140,6 +161,13 @@
 				AF0D74F91FB015EA003B332B /* map */,
 				AF0D74FD1FB01D6C003B332B /* flattenMap */,
 				AF0D75011FB03387003B332B /* concat */,
+				AFA365BE1FB0468900914A6C /* then */,
+				AFA365C21FB04CD400914A6C /* merge */,
+				AFA365C61FB0515B00914A6C /* zipWith */,
+				AFA365CA1FB057D500914A6C /* combineLatest */,
+				AFA365CE1FB05B2900914A6C /* reduce */,
+				AFA365D21FB0612900914A6C /* filter */,
+				AFA365D61FB0669500914A6C /* ignore */,
 			);
 			name = RACOperator;
 			sourceTree = "<group>";
@@ -245,6 +273,69 @@
 				AF9B33371E438A6F0031DF5B /* AddNumberViewController.m */,
 			);
 			name = AddNumbers;
+			sourceTree = "<group>";
+		};
+		AFA365BE1FB0468900914A6C /* then */ = {
+			isa = PBXGroup;
+			children = (
+				AFA365BF1FB046C200914A6C /* RACOperatorThenViewController.h */,
+				AFA365C01FB046C200914A6C /* RACOperatorThenViewController.m */,
+			);
+			name = then;
+			sourceTree = "<group>";
+		};
+		AFA365C21FB04CD400914A6C /* merge */ = {
+			isa = PBXGroup;
+			children = (
+				AFA365C31FB04CF400914A6C /* RACOperatorMergeViewController.h */,
+				AFA365C41FB04CF400914A6C /* RACOperatorMergeViewController.m */,
+			);
+			name = merge;
+			sourceTree = "<group>";
+		};
+		AFA365C61FB0515B00914A6C /* zipWith */ = {
+			isa = PBXGroup;
+			children = (
+				AFA365C71FB0519500914A6C /* RACOperatorZipWithViewController.h */,
+				AFA365C81FB0519500914A6C /* RACOperatorZipWithViewController.m */,
+			);
+			name = zipWith;
+			sourceTree = "<group>";
+		};
+		AFA365CA1FB057D500914A6C /* combineLatest */ = {
+			isa = PBXGroup;
+			children = (
+				AFA365CB1FB0584700914A6C /* RACOperatorCombineLatestViewController.h */,
+				AFA365CC1FB0584700914A6C /* RACOperatorCombineLatestViewController.m */,
+			);
+			name = combineLatest;
+			sourceTree = "<group>";
+		};
+		AFA365CE1FB05B2900914A6C /* reduce */ = {
+			isa = PBXGroup;
+			children = (
+				AFA365CF1FB05B6E00914A6C /* RACOperatorReduceViewController.h */,
+				AFA365D01FB05B6E00914A6C /* RACOperatorReduceViewController.m */,
+			);
+			name = reduce;
+			sourceTree = "<group>";
+		};
+		AFA365D21FB0612900914A6C /* filter */ = {
+			isa = PBXGroup;
+			children = (
+				AFA365D31FB0614F00914A6C /* RACOperatorFilterViewController.h */,
+				AFA365D41FB0614F00914A6C /* RACOperatorFilterViewController.m */,
+			);
+			name = filter;
+			sourceTree = "<group>";
+		};
+		AFA365D61FB0669500914A6C /* ignore */ = {
+			isa = PBXGroup;
+			children = (
+				AFA365D71FB066D300914A6C /* RACOperatorIgnoreViewController.h */,
+				AFA365D81FB066D300914A6C /* RACOperatorIgnoreViewController.m */,
+			);
+			name = ignore;
 			sourceTree = "<group>";
 		};
 		AFAF88D61FADD3B5004754DD /* FMDB */ = {
@@ -411,17 +502,24 @@
 				AFAF88DC1FADD3C9004754DD /* FmdbRacEditViewController.m in Sources */,
 				AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */,
 				AF0D75041FB03400003B332B /* RACOperatorConcatViewController.m in Sources */,
+				AFA365CD1FB0584700914A6C /* RACOperatorCombineLatestViewController.m in Sources */,
+				AFA365C11FB046C200914A6C /* RACOperatorThenViewController.m in Sources */,
 				AF2199E91FAF709A0025B73A /* RACSignalViewController.m in Sources */,
 				AF0D74F41FAFF095003B332B /* RACSubjectViewController.m in Sources */,
 				AFE96A391FAF5BA500536984 /* RACBaseTableViewController.m in Sources */,
+				AFA365D51FB0614F00914A6C /* RACOperatorFilterViewController.m in Sources */,
 				AFAF88DB1FADD3C9004754DD /* FmdbRacViewController.m in Sources */,
+				AFA365C91FB0519500914A6C /* RACOperatorZipWithViewController.m in Sources */,
 				AF0D74F81FB011C6003B332B /* RACOperatorTableViewController.m in Sources */,
 				AF0D74FC1FB01609003B332B /* RACOperatorMapViewController.m in Sources */,
+				AFA365D91FB066D300914A6C /* RACOperatorIgnoreViewController.m in Sources */,
 				AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */,
 				AF0D75001FB01D8E003B332B /* RACOperatorFlattenMapViewController.m in Sources */,
+				AFA365D11FB05B6E00914A6C /* RACOperatorReduceViewController.m in Sources */,
 				AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */,
 				AF087FF71E44905D009F5B66 /* SecondViewController.m in Sources */,
 				AF9B33201E4385CD0031DF5B /* AppDelegate.m in Sources */,
+				AFA365C51FB04CF400914A6C /* RACOperatorMergeViewController.m in Sources */,
 				AF9B331D1E4385CD0031DF5B /* main.m in Sources */,
 				AF3697B51E446407009C5999 /* LoginViewController.m in Sources */,
 				AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */,

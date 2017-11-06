@@ -10,6 +10,13 @@
 #import "RACOperatorMapViewController.h"
 #import "RACOperatorFlattenMapViewController.h"
 #import "RACOperatorConcatViewController.h"
+#import "RACOperatorThenViewController.h"
+#import "RACOperatorMergeViewController.h"
+#import "RACOperatorZipWithViewController.h"
+#import "RACOperatorCombineLatestViewController.h"
+#import "RACOperatorReduceViewController.h"
+#import "RACOperatorFilterViewController.h"
+#import "RACOperatorIgnoreViewController.h"
 
 @interface RACOperatorTableViewController ()
 @property (strong, nonatomic) NSArray *vcArray;
@@ -22,9 +29,15 @@
     if (!_vcArray) {
         _vcArray = @[
                      @{@"key":@"1 map", @"value":[RACOperatorMapViewController class]},
-                     
                      @{@"key":@"2 flatenMap and distinctUntilChanged", @"value":[RACOperatorFlattenMapViewController class]},
-                     @{@"key":@"3 concat", @"value":[RACOperatorConcatViewController class]}
+                     @{@"key":@"3 concat", @"value":[RACOperatorConcatViewController class]},
+                     @{@"key":@"4 then", @"value":[RACOperatorThenViewController class]},
+                     @{@"key":@"5 merge", @"value":[RACOperatorMergeViewController class]},
+                     @{@"key":@"6 zipWith", @"value":[RACOperatorZipWithViewController class]},
+                     @{@"key":@"7 combineLatest", @"value":[RACOperatorCombineLatestViewController class]},
+                     @{@"key":@"8 reduce", @"value":[RACOperatorReduceViewController class]},
+                     @{@"key":@"9 filter", @"value":[RACOperatorFilterViewController class]},
+                     @{@"key":@"10 ignore", @"value":[RACOperatorIgnoreViewController class]},
                      ];
     }
     
