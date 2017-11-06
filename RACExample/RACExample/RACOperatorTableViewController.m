@@ -9,6 +9,7 @@
 #import "RACOperatorTableViewController.h"
 #import "RACOperatorMapViewController.h"
 #import "RACOperatorFlattenMapViewController.h"
+#import "RACOperatorConcatViewController.h"
 
 @interface RACOperatorTableViewController ()
 @property (strong, nonatomic) NSArray *vcArray;
@@ -22,7 +23,8 @@
         _vcArray = @[
                      @{@"key":@"1 map", @"value":[RACOperatorMapViewController class]},
                      
-                     @{@"key":@"2 flatenMap and distinctUntilChanged", @"value":[RACOperatorFlattenMapViewController class]}
+                     @{@"key":@"2 flatenMap and distinctUntilChanged", @"value":[RACOperatorFlattenMapViewController class]},
+                     @{@"key":@"3 concat", @"value":[RACOperatorConcatViewController class]}
                      ];
     }
     

@@ -13,6 +13,8 @@
 		AF0D74F81FB011C6003B332B /* RACOperatorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0D74F71FB011C6003B332B /* RACOperatorTableViewController.m */; };
 		AF0D74FC1FB01609003B332B /* RACOperatorMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0D74FB1FB01609003B332B /* RACOperatorMapViewController.m */; };
 		AF0D75001FB01D8E003B332B /* RACOperatorFlattenMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0D74FF1FB01D8E003B332B /* RACOperatorFlattenMapViewController.m */; };
+		AF0D75041FB03400003B332B /* RACOperatorConcatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0D75031FB03400003B332B /* RACOperatorConcatViewController.m */; };
+		AF1BE7781FB03EC300C85C57 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1BE7771FB03EC300C85C57 /* Reveal.framework */; };
 		AF2199E91FAF709A0025B73A /* RACSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2199E81FAF70990025B73A /* RACSignalViewController.m */; };
 		AF3697B51E446407009C5999 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3697B41E446407009C5999 /* LoginViewController.m */; };
 		AF9B331D1E4385CD0031DF5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B331C1E4385CD0031DF5B /* main.m */; };
@@ -44,6 +46,9 @@
 		AF0D74FB1FB01609003B332B /* RACOperatorMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorMapViewController.m; sourceTree = "<group>"; };
 		AF0D74FE1FB01D8E003B332B /* RACOperatorFlattenMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorFlattenMapViewController.h; sourceTree = "<group>"; };
 		AF0D74FF1FB01D8E003B332B /* RACOperatorFlattenMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorFlattenMapViewController.m; sourceTree = "<group>"; };
+		AF0D75021FB03400003B332B /* RACOperatorConcatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorConcatViewController.h; sourceTree = "<group>"; };
+		AF0D75031FB03400003B332B /* RACOperatorConcatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorConcatViewController.m; sourceTree = "<group>"; };
+		AF1BE7771FB03EC300C85C57 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		AF2199E71FAF70990025B73A /* RACSignalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACSignalViewController.h; sourceTree = "<group>"; };
 		AF2199E81FAF70990025B73A /* RACSignalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSignalViewController.m; sourceTree = "<group>"; };
 		AF3697B31E446407009C5999 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F15391DEB3C23A9797BEE8AA /* libPods-RACExample.a in Frameworks */,
+				AF1BE7781FB03EC300C85C57 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +139,7 @@
 				AF0D74F71FB011C6003B332B /* RACOperatorTableViewController.m */,
 				AF0D74F91FB015EA003B332B /* map */,
 				AF0D74FD1FB01D6C003B332B /* flattenMap */,
+				AF0D75011FB03387003B332B /* concat */,
 			);
 			name = RACOperator;
 			sourceTree = "<group>";
@@ -153,6 +160,15 @@
 				AF0D74FF1FB01D8E003B332B /* RACOperatorFlattenMapViewController.m */,
 			);
 			name = flattenMap;
+			sourceTree = "<group>";
+		};
+		AF0D75011FB03387003B332B /* concat */ = {
+			isa = PBXGroup;
+			children = (
+				AF0D75021FB03400003B332B /* RACOperatorConcatViewController.h */,
+				AF0D75031FB03400003B332B /* RACOperatorConcatViewController.m */,
+			);
+			name = concat;
 			sourceTree = "<group>";
 		};
 		AF2199EA1FAF86820025B73A /* RACSignal */ = {
@@ -258,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				4E931184B8F00A3587A4C109 /* libPods-RACExample.a */,
+				AF1BE7771FB03EC300C85C57 /* Reveal.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -393,6 +410,7 @@
 				AF9B33341E4385FA0031DF5B /* MainTableViewController.m in Sources */,
 				AFAF88DC1FADD3C9004754DD /* FmdbRacEditViewController.m in Sources */,
 				AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */,
+				AF0D75041FB03400003B332B /* RACOperatorConcatViewController.m in Sources */,
 				AF2199E91FAF709A0025B73A /* RACSignalViewController.m in Sources */,
 				AF0D74F41FAFF095003B332B /* RACSubjectViewController.m in Sources */,
 				AFE96A391FAF5BA500536984 /* RACBaseTableViewController.m in Sources */,
@@ -473,6 +491,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -519,6 +543,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -530,6 +560,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CJPZVXX3U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RACExample/Header.pch";
 				INFOPLIST_FILE = RACExample/Info.plist;
@@ -545,6 +579,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CJPZVXX3U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RACExample/Header.pch";
 				INFOPLIST_FILE = RACExample/Info.plist;
