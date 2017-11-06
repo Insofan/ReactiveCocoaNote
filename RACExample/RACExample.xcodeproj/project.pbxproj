@@ -11,6 +11,8 @@
 		AF087FF71E44905D009F5B66 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF087FF61E44905D009F5B66 /* SecondViewController.m */; };
 		AF0D74F41FAFF095003B332B /* RACSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0D74F31FAFF095003B332B /* RACSubjectViewController.m */; };
 		AF0D74F81FB011C6003B332B /* RACOperatorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0D74F71FB011C6003B332B /* RACOperatorTableViewController.m */; };
+		AF0D74FC1FB01609003B332B /* RACOperatorMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0D74FB1FB01609003B332B /* RACOperatorMapViewController.m */; };
+		AF0D75001FB01D8E003B332B /* RACOperatorFlattenMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0D74FF1FB01D8E003B332B /* RACOperatorFlattenMapViewController.m */; };
 		AF2199E91FAF709A0025B73A /* RACSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2199E81FAF70990025B73A /* RACSignalViewController.m */; };
 		AF3697B51E446407009C5999 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3697B41E446407009C5999 /* LoginViewController.m */; };
 		AF9B331D1E4385CD0031DF5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B331C1E4385CD0031DF5B /* main.m */; };
@@ -38,6 +40,10 @@
 		AF0D74F31FAFF095003B332B /* RACSubjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSubjectViewController.m; sourceTree = "<group>"; };
 		AF0D74F61FB011C6003B332B /* RACOperatorTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorTableViewController.h; sourceTree = "<group>"; };
 		AF0D74F71FB011C6003B332B /* RACOperatorTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorTableViewController.m; sourceTree = "<group>"; };
+		AF0D74FA1FB01609003B332B /* RACOperatorMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorMapViewController.h; sourceTree = "<group>"; };
+		AF0D74FB1FB01609003B332B /* RACOperatorMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorMapViewController.m; sourceTree = "<group>"; };
+		AF0D74FE1FB01D8E003B332B /* RACOperatorFlattenMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorFlattenMapViewController.h; sourceTree = "<group>"; };
+		AF0D74FF1FB01D8E003B332B /* RACOperatorFlattenMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorFlattenMapViewController.m; sourceTree = "<group>"; };
 		AF2199E71FAF70990025B73A /* RACSignalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACSignalViewController.h; sourceTree = "<group>"; };
 		AF2199E81FAF70990025B73A /* RACSignalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSignalViewController.m; sourceTree = "<group>"; };
 		AF3697B31E446407009C5999 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -125,8 +131,28 @@
 			children = (
 				AF0D74F61FB011C6003B332B /* RACOperatorTableViewController.h */,
 				AF0D74F71FB011C6003B332B /* RACOperatorTableViewController.m */,
+				AF0D74F91FB015EA003B332B /* map */,
+				AF0D74FD1FB01D6C003B332B /* flattenMap */,
 			);
 			name = RACOperator;
+			sourceTree = "<group>";
+		};
+		AF0D74F91FB015EA003B332B /* map */ = {
+			isa = PBXGroup;
+			children = (
+				AF0D74FA1FB01609003B332B /* RACOperatorMapViewController.h */,
+				AF0D74FB1FB01609003B332B /* RACOperatorMapViewController.m */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		AF0D74FD1FB01D6C003B332B /* flattenMap */ = {
+			isa = PBXGroup;
+			children = (
+				AF0D74FE1FB01D8E003B332B /* RACOperatorFlattenMapViewController.h */,
+				AF0D74FF1FB01D8E003B332B /* RACOperatorFlattenMapViewController.m */,
+			);
+			name = flattenMap;
 			sourceTree = "<group>";
 		};
 		AF2199EA1FAF86820025B73A /* RACSignal */ = {
@@ -208,10 +234,10 @@
 		AFAF88D61FADD3B5004754DD /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				AFAF88D71FADD3C8004754DD /* FmdbRacEditViewController.h */,
-				AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */,
 				AFAF88D81FADD3C9004754DD /* FmdbRacViewController.h */,
 				AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */,
+				AFAF88D71FADD3C8004754DD /* FmdbRacEditViewController.h */,
+				AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */,
 			);
 			name = FMDB;
 			sourceTree = "<group>";
@@ -372,7 +398,9 @@
 				AFE96A391FAF5BA500536984 /* RACBaseTableViewController.m in Sources */,
 				AFAF88DB1FADD3C9004754DD /* FmdbRacViewController.m in Sources */,
 				AF0D74F81FB011C6003B332B /* RACOperatorTableViewController.m in Sources */,
+				AF0D74FC1FB01609003B332B /* RACOperatorMapViewController.m in Sources */,
 				AF9B33381E438A6F0031DF5B /* AddNumberViewController.m in Sources */,
+				AF0D75001FB01D8E003B332B /* RACOperatorFlattenMapViewController.m in Sources */,
 				AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */,
 				AF087FF71E44905D009F5B66 /* SecondViewController.m in Sources */,
 				AF9B33201E4385CD0031DF5B /* AppDelegate.m in Sources */,
