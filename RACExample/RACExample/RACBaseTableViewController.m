@@ -12,6 +12,7 @@
 #import "RACSubjectViewController.h"
 #import "RACOperatorTableViewController.h"
 #import "RACMacroTableViewController.h"
+#import "RACUIKitTableViewController.h"
 
 
 @interface RACBaseTableViewController ()
@@ -28,7 +29,8 @@
                      @{@"key":@"1 RACSignal", @"value":[RACSignalViewController class]},
                      @{@"key":@"2 RACSubject", @"value":[RACSubjectViewController class]},
                      @{@"key":@"3 RACOperator", @"value":[RACOperatorTableViewController class]},
-                     @{@"key":@"4 RACMacro", @"value":[RACMacroTableViewController class]}
+                     @{@"key":@"4 RACMacro", @"value":[RACMacroTableViewController class]},
+                     @{@"key":@"5 RACUIKit", @"value":[RACUIKitTableViewController class]},
                      ];
     }
     return _vcArray;
