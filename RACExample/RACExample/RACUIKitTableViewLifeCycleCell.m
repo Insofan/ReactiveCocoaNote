@@ -17,7 +17,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     self.buttonTitle = buttonTitle;
     if (self) {
-
+        
         [self setupUI];
     }
     

@@ -13,6 +13,7 @@
 #import "FirstViewController.h"
 #import "SearchTableViewController.h"
 #import "FmdbRacViewController.h"
+#import "MVVMMovieViewController.h"
 
 @interface MainTableViewController ()
 @property (strong, nonatomic) NSArray *vcArray;
@@ -29,7 +30,8 @@
                      @{@"key":@"3 登录界面", @"value":[LoginViewController class]},
                      @{@"key":@"4 Callback", @"value":[FirstViewController class]},
                      @{@"key":@"5 搜索界面", @"value":[SearchTableViewController class]},
-                     @{@"key":@"6 FMDB应用", @"value":[FmdbRacViewController class]}
+                     @{@"key":@"6 FMDB应用", @"value":[FmdbRacViewController class]},
+                     @{@"key":@"7 MVVM应用一", @"value":[MVVMMovieViewController class]}
                         ];
         
     }
