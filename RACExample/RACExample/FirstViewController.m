@@ -22,6 +22,7 @@
     });
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
    
+    @weakify(self);
     self.label = ({
         _label = [UILabel new];
         [self.view addSubview:_label];
@@ -48,9 +49,17 @@
     //2. alloc init subject
     vc.subject = [RACSubject subject];
     //3. subscribeNext 订阅
+    //内存管理
+    [vc.subject.rac_willDeallocSignal subscribeCompleted:^{
+        NSLog(@"first subject dealloc");
+               }] ;
+    @weakify(self);
     [vc.subject subscribeNext:^(NSString* text) {
+        @strongify(self);
         self.label.text = text;
     }];
+    
+    [vc.subject sendCompleted];
 }
 
 - (void)viewDidLoad {

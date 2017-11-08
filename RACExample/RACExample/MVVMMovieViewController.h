@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MVVMMovieViewController : UIViewController
+@property (strong, nonatomic) RACSubject *movieModelSubject;
 
 @end

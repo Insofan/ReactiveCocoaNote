@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MVVMMovieBaseModel.h"
 
 
 
@@ -47,6 +46,8 @@
 @property (nonatomic,copy) NSString *id;
 
 @end
+/*
 @interface MVVMMovieModelList: MVVMMovieBaseModel
 @property (strong, nonatomic) NSArray <MVVMMovieModel *> *subjects;
 @end
+ */

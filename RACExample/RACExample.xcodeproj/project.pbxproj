@@ -24,7 +24,6 @@
 		AF585E531FB2FE2E007F55E0 /* MVVMMovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF585E521FB2FE2E007F55E0 /* MVVMMovieCollectionViewCell.m */; };
 		AF585E561FB323D9007F55E0 /* MVVMMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF585E551FB323D9007F55E0 /* MVVMMovieModel.m */; };
 		AF585E591FB32458007F55E0 /* MVVMMovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF585E581FB32458007F55E0 /* MVVMMovieViewModel.m */; };
-		AF585E5E1FB33049007F55E0 /* MVVMMovieBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF585E5D1FB33049007F55E0 /* MVVMMovieBaseModel.m */; };
 		AF5FB6651FB09FFD00C05CFE /* RACMacroRACTuplePackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5FB6641FB09FFD00C05CFE /* RACMacroRACTuplePackViewController.m */; };
 		AF7E5A3A1FB1628C0067E323 /* RACUIKitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E5A391FB1628C0067E323 /* RACUIKitTableViewController.m */; };
 		AF7E5A3E1FB164BC0067E323 /* RACUIKitButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E5A3D1FB164BC0067E323 /* RACUIKitButtonViewController.m */; };
@@ -93,9 +92,6 @@
 		AF585E551FB323D9007F55E0 /* MVVMMovieModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMMovieModel.m; sourceTree = "<group>"; };
 		AF585E571FB32458007F55E0 /* MVVMMovieViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMMovieViewModel.h; sourceTree = "<group>"; };
 		AF585E581FB32458007F55E0 /* MVVMMovieViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMMovieViewModel.m; sourceTree = "<group>"; };
-		AF585E5B1FB32A7A007F55E0 /* MovieModelProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieModelProtocal.h; sourceTree = "<group>"; };
-		AF585E5C1FB33049007F55E0 /* MVVMMovieBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMMovieBaseModel.h; sourceTree = "<group>"; };
-		AF585E5D1FB33049007F55E0 /* MVVMMovieBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMMovieBaseModel.m; sourceTree = "<group>"; };
 		AF5FB6631FB09FFD00C05CFE /* RACMacroRACTuplePackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMacroRACTuplePackViewController.h; sourceTree = "<group>"; };
 		AF5FB6641FB09FFD00C05CFE /* RACMacroRACTuplePackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACMacroRACTuplePackViewController.m; sourceTree = "<group>"; };
 		AF7E5A381FB1628C0067E323 /* RACUIKitTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACUIKitTableViewController.h; sourceTree = "<group>"; };
@@ -339,11 +335,8 @@
 		AF585E4F1FB2FDEA007F55E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AF585E5B1FB32A7A007F55E0 /* MovieModelProtocal.h */,
 				AF585E541FB323D9007F55E0 /* MVVMMovieModel.h */,
 				AF585E551FB323D9007F55E0 /* MVVMMovieModel.m */,
-				AF585E5C1FB33049007F55E0 /* MVVMMovieBaseModel.h */,
-				AF585E5D1FB33049007F55E0 /* MVVMMovieBaseModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -748,7 +741,6 @@
 				AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */,
 				AF0D75041FB03400003B332B /* RACOperatorConcatViewController.m in Sources */,
 				AFA365CD1FB0584700914A6C /* RACOperatorCombineLatestViewController.m in Sources */,
-				AF585E5E1FB33049007F55E0 /* MVVMMovieBaseModel.m in Sources */,
 				AFA365C11FB046C200914A6C /* RACOperatorThenViewController.m in Sources */,
 				AF2199E91FAF709A0025B73A /* RACSignalViewController.m in Sources */,
 				AF0D74F41FAFF095003B332B /* RACSubjectViewController.m in Sources */,

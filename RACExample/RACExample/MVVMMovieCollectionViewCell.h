@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MVVMMovieModel.h"
+#import "MVVMMovieViewController.h"
 
 @interface MVVMMovieCollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UILabel *moviewTitleLabel;
+- (void)initWithModel:(id)model;
 @end

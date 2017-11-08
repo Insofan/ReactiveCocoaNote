@@ -12,6 +12,8 @@
 #import "MVVMMovieModel.h"
 #import "MVVMMovieViewModel.h"
 
+#import <SDWebImage/UIImageView+WebCache.h>
+
 @interface MVVMMovieViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic)  MVVMMovieModel *movieModel;
@@ -66,17 +68,14 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MVVMMovieCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
-    [cell sizeToFit];
-    //cell.backgroundColor = [UIColor orangeColor];
-    cell.imageView.backgroundColor = [UIColor redColor];
-    cell.moviewTitleLabel.text = self.movieModelArray[indexPath.row].title?:@"";
-    //cell = [[MVVMMovieCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+
+    [cell initWithModel:self.movieModelArray[indexPath.row]];
+    
     return cell;
     
 }
  
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSLog(@"Movie array: %ld", self.movieModelArray.count);
     return self.movieModelArray.count;
 }
 

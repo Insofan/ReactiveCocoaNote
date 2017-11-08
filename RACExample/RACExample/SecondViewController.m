@@ -16,6 +16,7 @@
 @implementation SecondViewController
 #pragma mark: setupUI
 - (void)setupUI {
+    @weakify(self);
     self.textField = ({
         _textField = [UITextField new];
         [self.view addSubview:_textField];
@@ -41,6 +42,7 @@
     }];
     
     [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+        
         make.size.mas_equalTo(CGSizeMake(200, 40));
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.top.mas_equalTo(self.textField.mas_bottom).offset(50);
@@ -49,7 +51,13 @@
 
 - (void)sendBack {
     //1.subject send value
+    //内存管理
+    [self.subject.rac_willDeallocSignal subscribeCompleted:^{
+        NSLog(@"subject completed");
+    }];
     [self.subject sendNext:self.textField.text];
+    [self.subject sendCompleted];
+    
     [self.navigationController popViewControllerAnimated:true];
 }
 

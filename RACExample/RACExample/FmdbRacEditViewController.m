@@ -87,8 +87,10 @@
 }
 
 - (void)racBlock {
+    @weakify(self);
     [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         
+        @strongify(self);
         NSString *updateString=@" UPDATE rac_test1 SET item = ? WHERE id = ?";
         //剔除了前两位
         NSString *subString = [self.textView.text substringFromIndex:2];
@@ -98,7 +100,7 @@
         
         //pop后要在willAppear里面reloadData
         [self.navigationController popViewControllerAnimated:true];
-
+        
         
     }];
         
