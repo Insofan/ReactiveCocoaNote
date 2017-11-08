@@ -41,6 +41,11 @@
 		AFA761D21FB0914100B4845C /* RACMacroTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA761D11FB0914100B4845C /* RACMacroTableViewController.m */; };
 		AFAF88DB1FADD3C9004754DD /* FmdbRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */; };
 		AFAF88DC1FADD3C9004754DD /* FmdbRacEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */; };
+		AFB157CC1FB2A9BD00BFB45D /* RACOperatorTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB157CB1FB2A9BD00BFB45D /* RACOperatorTakeViewController.m */; };
+		AFB157D01FB2ABE800BFB45D /* RACOperatorTakeLastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB157CF1FB2ABE800BFB45D /* RACOperatorTakeLastViewController.m */; };
+		AFB157D41FB2ADAA00BFB45D /* RACOperatorSkipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB157D31FB2ADAA00BFB45D /* RACOperatorSkipViewController.m */; };
+		AFB157D81FB2B14500BFB45D /* RACOperatorSwitchToLatestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB157D71FB2B14500BFB45D /* RACOperatorSwitchToLatestViewController.m */; };
+		AFB157DD1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB157DC1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.m */; };
 		AFE96A391FAF5BA500536984 /* RACBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE96A381FAF5BA500536984 /* RACBaseTableViewController.m */; };
 		AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF6610A1E449D260087CC8F /* SearchTableViewController.m */; };
 		F15391DEB3C23A9797BEE8AA /* libPods-RACExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E931184B8F00A3587A4C109 /* libPods-RACExample.a */; };
@@ -116,6 +121,16 @@
 		AFAF88D81FADD3C9004754DD /* FmdbRacViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbRacViewController.h; sourceTree = "<group>"; };
 		AFAF88D91FADD3C9004754DD /* FmdbRacViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbRacViewController.m; sourceTree = "<group>"; };
 		AFAF88DA1FADD3C9004754DD /* FmdbRacEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbRacEditViewController.m; sourceTree = "<group>"; };
+		AFB157CA1FB2A9BD00BFB45D /* RACOperatorTakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorTakeViewController.h; sourceTree = "<group>"; };
+		AFB157CB1FB2A9BD00BFB45D /* RACOperatorTakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorTakeViewController.m; sourceTree = "<group>"; };
+		AFB157CE1FB2ABE800BFB45D /* RACOperatorTakeLastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorTakeLastViewController.h; sourceTree = "<group>"; };
+		AFB157CF1FB2ABE800BFB45D /* RACOperatorTakeLastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorTakeLastViewController.m; sourceTree = "<group>"; };
+		AFB157D21FB2ADAA00BFB45D /* RACOperatorSkipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorSkipViewController.h; sourceTree = "<group>"; };
+		AFB157D31FB2ADAA00BFB45D /* RACOperatorSkipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorSkipViewController.m; sourceTree = "<group>"; };
+		AFB157D61FB2B14500BFB45D /* RACOperatorSwitchToLatestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorSwitchToLatestViewController.h; sourceTree = "<group>"; };
+		AFB157D71FB2B14500BFB45D /* RACOperatorSwitchToLatestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorSwitchToLatestViewController.m; sourceTree = "<group>"; };
+		AFB157DB1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACOperatorDoNextCompletedViewController.h; sourceTree = "<group>"; };
+		AFB157DC1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACOperatorDoNextCompletedViewController.m; sourceTree = "<group>"; };
 		AFE96A371FAF5BA500536984 /* RACBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACBaseTableViewController.h; sourceTree = "<group>"; };
 		AFE96A381FAF5BA500536984 /* RACBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACBaseTableViewController.m; sourceTree = "<group>"; };
 		AFE96A3D1FAF5C8700536984 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
@@ -210,6 +225,11 @@
 				AFA365CE1FB05B2900914A6C /* reduce */,
 				AFA365D21FB0612900914A6C /* filter */,
 				AFA365D61FB0669500914A6C /* ignore */,
+				AFB157C91FB2A7FF00BFB45D /* take */,
+				AFB157CD1FB2ABC700BFB45D /* takeLast */,
+				AFB157D11FB2AD5900BFB45D /* skip */,
+				AFB157D51FB2B0A700BFB45D /* switchToLatest */,
+				AFB157D91FB2B2CF00BFB45D /* doNext doCompleted */,
 			);
 			name = RACOperator;
 			sourceTree = "<group>";
@@ -443,6 +463,51 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
+		AFB157C91FB2A7FF00BFB45D /* take */ = {
+			isa = PBXGroup;
+			children = (
+				AFB157CA1FB2A9BD00BFB45D /* RACOperatorTakeViewController.h */,
+				AFB157CB1FB2A9BD00BFB45D /* RACOperatorTakeViewController.m */,
+			);
+			name = take;
+			sourceTree = "<group>";
+		};
+		AFB157CD1FB2ABC700BFB45D /* takeLast */ = {
+			isa = PBXGroup;
+			children = (
+				AFB157CE1FB2ABE800BFB45D /* RACOperatorTakeLastViewController.h */,
+				AFB157CF1FB2ABE800BFB45D /* RACOperatorTakeLastViewController.m */,
+			);
+			name = takeLast;
+			sourceTree = "<group>";
+		};
+		AFB157D11FB2AD5900BFB45D /* skip */ = {
+			isa = PBXGroup;
+			children = (
+				AFB157D21FB2ADAA00BFB45D /* RACOperatorSkipViewController.h */,
+				AFB157D31FB2ADAA00BFB45D /* RACOperatorSkipViewController.m */,
+			);
+			name = skip;
+			sourceTree = "<group>";
+		};
+		AFB157D51FB2B0A700BFB45D /* switchToLatest */ = {
+			isa = PBXGroup;
+			children = (
+				AFB157D61FB2B14500BFB45D /* RACOperatorSwitchToLatestViewController.h */,
+				AFB157D71FB2B14500BFB45D /* RACOperatorSwitchToLatestViewController.m */,
+			);
+			name = switchToLatest;
+			sourceTree = "<group>";
+		};
+		AFB157D91FB2B2CF00BFB45D /* doNext doCompleted */ = {
+			isa = PBXGroup;
+			children = (
+				AFB157DB1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.h */,
+				AFB157DC1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.m */,
+			);
+			name = "doNext doCompleted";
+			sourceTree = "<group>";
+		};
 		AFE96A361FAF5B7700536984 /* RACBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,14 +683,19 @@
 				AF7E5A421FB16CBD0067E323 /* RACUIKitTableViewLifeCycleController.m in Sources */,
 				AF0D75001FB01D8E003B332B /* RACOperatorFlattenMapViewController.m in Sources */,
 				AFA365D11FB05B6E00914A6C /* RACOperatorReduceViewController.m in Sources */,
+				AFB157CC1FB2A9BD00BFB45D /* RACOperatorTakeViewController.m in Sources */,
 				AF5FB6651FB09FFD00C05CFE /* RACMacroRACTuplePackViewController.m in Sources */,
+				AFB157D81FB2B14500BFB45D /* RACOperatorSwitchToLatestViewController.m in Sources */,
+				AFB157D41FB2ADAA00BFB45D /* RACOperatorSkipViewController.m in Sources */,
 				AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */,
+				AFB157DD1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.m in Sources */,
 				AF087FF71E44905D009F5B66 /* SecondViewController.m in Sources */,
 				AF9B33201E4385CD0031DF5B /* AppDelegate.m in Sources */,
 				AFA365C51FB04CF400914A6C /* RACOperatorMergeViewController.m in Sources */,
 				AF9B331D1E4385CD0031DF5B /* main.m in Sources */,
 				AFA761D21FB0914100B4845C /* RACMacroTableViewController.m in Sources */,
 				AF3697B51E446407009C5999 /* LoginViewController.m in Sources */,
+				AFB157D01FB2ABE800BFB45D /* RACOperatorTakeLastViewController.m in Sources */,
 				AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,11 @@
 #import "RACOperatorReduceViewController.h"
 #import "RACOperatorFilterViewController.h"
 #import "RACOperatorIgnoreViewController.h"
+#import "RACOperatorTakeViewController.h"
+#import "RACOperatorTakeLastViewController.h"
+#import "RACOperatorSkipViewController.h"
+#import "RACOperatorSwitchToLatestViewController.h"
+#import "RACOperatorDoNextCompletedViewController.h"
 
 @interface RACOperatorTableViewController ()
 @property (strong, nonatomic) NSArray *vcArray;
@@ -38,6 +43,12 @@
                      @{@"key":@"8 reduce", @"value":[RACOperatorReduceViewController class]},
                      @{@"key":@"9 filter", @"value":[RACOperatorFilterViewController class]},
                      @{@"key":@"10 ignore", @"value":[RACOperatorIgnoreViewController class]},
+                     @{@"key":@"11 take", @"value":[RACOperatorTakeViewController class]},
+                     @{@"key":@"12 takeLast", @"value":[RACOperatorTakeLastViewController class]},
+                     @{@"key":@"13 skip", @"value":[RACOperatorSkipViewController class]},
+                     @{@"key":@"14 switchToLatest", @"value":[RACOperatorSwitchToLatestViewController class]},
+                     @{@"key":@"15 switchToLatest", @"value":[RACOperatorSwitchToLatestViewController class]},
+                     @{@"key":@"16 doNext and doCompleted", @"value":[RACOperatorDoNextCompletedViewController class]},
                      ];
     }
     

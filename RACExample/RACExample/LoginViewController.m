@@ -72,7 +72,6 @@
         _loginButton.backgroundColor = [UIColor greenColor];
         [_loginButton setTitle:@"Enter Something" forState:UIControlStateNormal];
         _loginButton.titleLabel.textColor = [UIColor blackColor];
-        [_loginButton addTarget:self action:@selector(popViewController) forControlEvents:UIControlEventTouchUpInside];
         _loginButton;
     });
     
@@ -123,26 +122,33 @@
 - (void)initialRAC {
     @weakify(self)
     //1.map 对每个信号做同样操作: 宏 返回bool值
-    RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal map:^id(NSString* value) {
+    
+    //因为filter返回bool值，而map不能接受bool值，所以要将bool转化为nsmuber
+    RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
         return @([self isValid:value]);
     }];
-    
+
     //2.bool convert nsnumber 根据bool值操作
     //3.subscribe
    
     [[validUsernameSignal map:^id(NSNumber *usernameValid) {
         @strongify(self);
         self.usernameLabel.hidden      = [usernameValid boolValue];
-        
         self.passwordTextField.enabled = [usernameValid boolValue];
-        
-        UIColor *color = [usernameValid boolValue] ? [UIColor whiteColor] : [UIColor lightGrayColor];
-        self.passwordTextField.backgroundColor = color;
-        
+
+        UIColor *pwdTextFieldColor = [usernameValid boolValue] ? [UIColor whiteColor] : [UIColor lightGrayColor];
+            self.passwordTextField.backgroundColor = pwdTextFieldColor;
+        if (self.passwordTextField.text.length > 0) {
+            self.passwordTextField.backgroundColor = [UIColor yellowColor];
+        }
         return [usernameValid boolValue] ? [UIColor yellowColor] : [UIColor whiteColor] ;
     }]  subscribeNext:^(UIColor *color) {
-        //@strongify(self)
-        //self.usernameTextField.backgroundColor = color;
+        @strongify(self)
+        self.usernameTextField.backgroundColor = color;
+        
+        if (color == [UIColor whiteColor]) {
+            self.passwordTextField.text = @"";
+        }
     }];
     
     //1.创建信号
@@ -158,11 +164,18 @@
             self.passwordLabel.hidden = true;
             self.loginButton.enabled = true;
             [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+            self.passwordTextField.backgroundColor = [UIColor yellowColor];
+            self.loginButton.backgroundColor = [UIColor greenColor];
         }else if ([passwordValid boolValue] == false) {
             self.loginButton.enabled = false;
             self.passwordLabel.hidden = false;
             [self.loginButton setTitle:@"Enter Something" forState:UIControlStateNormal];
+            self.loginButton.backgroundColor = [UIColor redColor];
         }
+    }];
+    
+    [[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [self popViewController];
     }];
     
 }
