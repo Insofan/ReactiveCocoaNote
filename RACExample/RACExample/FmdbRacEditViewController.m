@@ -52,7 +52,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor randomColor];
+    self.view.backgroundColor = [UIColor hx_randomColor];
     [self setupUI];
     [self racBlock];
 
@@ -67,7 +67,7 @@
     });
     
     self.button = ({
-         _button = [UIButton buttonWithTitle:@"修改完成" fontSize:14 normalColor:[UIColor blueColor] selectedColor:[UIColor redColor]];
+         _button = [UIButton hx_buttonWithTitle:@"修改完成" fontSize:14 normalColor:[UIColor blueColor] selectedColor:[UIColor redColor]];
         _button.backgroundColor = [UIColor whiteColor];
 
         [self.view addSubview:_button];
@@ -75,7 +75,7 @@
     });
     
     [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.width.mas_equalTo([UIScreen screenWidth]/2);
+        make.height.width.mas_equalTo([UIScreen hx_screenWidth]/2);
         make.center.mas_equalTo(self.view);
     }];
     

@@ -26,7 +26,7 @@
 
 - (void)setupUI {
     self.buttonOne = ({
-        _buttonOne = [UIButton buttonWithTitle:self.buttonTitle fontSize:15 normalColor:[UIColor blackColor] selectedColor:[UIColor redColor]] ;
+        _buttonOne = [UIButton hx_buttonWithTitle:self.buttonTitle fontSize:15 normalColor:[UIColor blackColor] selectedColor:[UIColor redColor]] ;
         [self addSubview:_buttonOne];
         _buttonOne.backgroundColor = [UIColor redColor];
         _buttonOne.titleLabel.text = self.buttonTitle;

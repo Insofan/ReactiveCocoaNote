@@ -9,7 +9,7 @@
 #import "HXButtonTool.h"
 
 @implementation UIButton(HXTool)
-+ (instancetype)buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize normalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor {
++ (instancetype)hx_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize normalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor {
     UIButton *button = [self new];
     [button setTitle:title forState:UIControlStateNormal];
     

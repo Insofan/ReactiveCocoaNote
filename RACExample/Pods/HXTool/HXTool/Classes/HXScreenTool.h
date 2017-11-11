@@ -10,10 +10,10 @@
 
 @interface UIScreen(HXTool)
 
-+ (CGFloat )screenWidth;
-+ (CGFloat )screenHeight;
-+ (CGRect )screenBounds;
++ (CGFloat )hx_screenWidth;
++ (CGFloat )hx_screenHeight;
++ (CGRect )hx_screenBounds;
 
-+ (CGFloat )scale;
++ (CGFloat )hx_scale;
 
 @end

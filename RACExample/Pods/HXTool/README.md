@@ -60,6 +60,24 @@ view.frame = CGRectMake(100, 300, [UIScreen screenWidth]/2, [UIScreen screenHeig
 NSLog(@"app version: %@", AppVersion);
 ```
 
+5.NSArray
+
+```
+ //enumerate objects
+ [self.array hx_each:^(id obj) {
+        NSLog(@"%@",obj);
+    }];
+```
+
+6.NSDictionary
+
+```
+ //enumerate dictionary
+ [self.dictionary hx_each:^(id obj) {
+        NSLog(@"%@",obj);
+    }];
+```
+
 
 
 ## Author

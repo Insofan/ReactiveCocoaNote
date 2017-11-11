@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor randomColor];
+    self.view.backgroundColor = [UIColor hx_randomColor];
     
     [self setupUI];
     [self racTuplePack];

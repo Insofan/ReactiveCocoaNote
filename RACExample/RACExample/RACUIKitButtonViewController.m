@@ -28,7 +28,7 @@
     });
     
     self.buttonOne = ({
-        _buttonOne = [UIButton buttonWithTitle:@"RAC button" fontSize:20 normalColor:[UIColor blackColor] selectedColor:[UIColor redColor]] ;
+        _buttonOne = [UIButton hx_buttonWithTitle:@"RAC button" fontSize:20 normalColor:[UIColor blackColor] selectedColor:[UIColor redColor]] ;
         [self.view addSubview:_buttonOne];
         _buttonOne.backgroundColor = [UIColor whiteColor];
         _buttonOne;
@@ -46,28 +46,28 @@
     });
     
     [self.textFieldOne mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake([UIScreen screenWidth] / 2.0, [UIScreen screenHeight] / 10.0));
+        make.size.mas_equalTo(CGSizeMake([UIScreen hx_screenWidth] / 2.0, [UIScreen hx_screenHeight] / 10.0));
         make.centerX.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view.mas_top).mas_offset([UIScreen screenHeight] / 10.0);
+        make.top.mas_equalTo(self.view.mas_top).mas_offset([UIScreen hx_screenHeight] / 10.0);
     }];
     
     
     [self.buttonOne mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake([UIScreen screenWidth] / 4.0, [UIScreen screenHeight] / 20.0));
+        make.size.mas_equalTo(CGSizeMake([UIScreen hx_screenWidth] / 4.0, [UIScreen hx_screenHeight] / 20.0));
         make.centerX.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view.mas_top).mas_offset([UIScreen screenHeight] * 3/ 10.0);
+        make.top.mas_equalTo(self.view.mas_top).mas_offset([UIScreen hx_screenHeight] * 3/ 10.0);
     }];
     
     [self.labelOne mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake([UIScreen screenWidth] / 2.0, [UIScreen screenHeight] / 10.0));
+        make.size.mas_equalTo(CGSizeMake([UIScreen hx_screenWidth] / 2.0, [UIScreen hx_screenHeight] / 10.0));
         make.centerX.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view.mas_top).mas_offset([UIScreen screenHeight]  * 4 / 10.0);
+        make.top.mas_equalTo(self.view.mas_top).mas_offset([UIScreen hx_screenHeight]  * 4 / 10.0);
     }];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor randomColor];
+    self.view.backgroundColor = [UIColor hx_randomColor];
     // Do any additional setup after loading the view.
     [self setupUI];
     

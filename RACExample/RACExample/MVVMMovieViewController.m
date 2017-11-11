@@ -36,7 +36,7 @@
     self.collectionView = ({
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        flowLayout.itemSize = CGSizeMake(([UIScreen screenWidth] - 20)/2 , ([UIScreen screenHeight] - 20) /2 +50);
+        flowLayout.itemSize = CGSizeMake(([UIScreen hx_screenWidth] - 20)/2 , ([UIScreen hx_screenHeight] - 20) /2 +50);
         //定义每个UICollectionView 横向的间距
         flowLayout.minimumLineSpacing = 5;
         //定义每个UICollectionView 纵向的间距

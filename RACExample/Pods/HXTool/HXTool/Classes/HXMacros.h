@@ -28,4 +28,16 @@
 //App版本号
 #define AppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 
+
+
+//obj范型，计算obj类型
+
+#if __has_feature(objc_generics)
+#   define GENERICS(class, ...)      class<__VA_ARGS__>
+#   define GENERICS_TYPE(type)       type
+#else
+#   define GENERICS(class, ...)      class
+#   define GENERICS_TYPE(type)       id
+#endif
+
 #endif /* HXMacros_h */

@@ -24,7 +24,7 @@
     self.imageView = ({
         _imageView = [UIImageView new];
         [self addSubview:_imageView];
-        _imageView.backgroundColor = [UIColor randomColor];
+        _imageView.backgroundColor = [UIColor hx_randomColor];
         
         //_imageView.contentMode = UIViewContentModeScaleToFill;
         
@@ -34,7 +34,7 @@
     self.movieTitleLabel = ({
         _movieTitleLabel = [UILabel new];
         [self addSubview:_movieTitleLabel];
-        _movieTitleLabel.backgroundColor = [UIColor randomColor];
+        _movieTitleLabel.backgroundColor = [UIColor hx_randomColor];
         _movieTitleLabel.textAlignment = NSTextAlignmentCenter;
         _movieTitleLabel;
         
@@ -66,7 +66,7 @@
     if (self) {
         [self setupUI];
        
-        self.backgroundColor = [UIColor randomColor];
+        self.backgroundColor = [UIColor hx_randomColor];
     }
     return self;
 }

@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor  = [UIColor randomColor];
+    self.view.backgroundColor  = [UIColor hx_randomColor];
     [self doNextAndDoCompleted];
 }
 

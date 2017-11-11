@@ -9,7 +9,7 @@
 #import "HXColorTool.h"
 @implementation UIColor(HXTool)
 //16进制颜色
-+ (UIColor *)colorWithRGBString:(NSString *)string {
++ (UIColor *)hx_colorWithRGBString:(NSString *)string {
     if ([string length] != 6) {
         return nil;
     }
@@ -48,16 +48,16 @@
 }
 
 //RGB数字颜色
-+ (UIColor *)colorWithRGBNumber:(NSUInteger)red green:(NSUInteger)green blue:(NSUInteger)blue {
++ (UIColor *)hx_colorWithRGBNumber:(NSUInteger)red green:(NSUInteger)green blue:(NSUInteger)blue {
      return [UIColor colorWithRed:red/255.5 green:green/255.5 blue:blue/255.5 alpha:1.0];
 }
 //RGB带alpha数字颜色
-+ (UIColor *)colorWithRGBNumber:(NSUInteger)red green:(NSUInteger)green blue:(NSUInteger)blue alpha:(NSUInteger)alpha {
++ (UIColor *)hx_colorWithRGBNumber:(NSUInteger)red green:(NSUInteger)green blue:(NSUInteger)blue alpha:(NSUInteger)alpha {
      return [UIColor colorWithRed:red/255.5 green:green/255.5 blue:blue/255.5 alpha:alpha];
 }
 
 //随机颜色
-+ (UIColor *)randomColor {
++ (UIColor *)hx_randomColor {
     
     return [UIColor colorWithRed:(arc4random_uniform(255)/255.0) green:(arc4random_uniform(255)/255.0) blue:(arc4random_uniform(255)/255.0) alpha:1];
 }

@@ -7,9 +7,9 @@
 //
 #import <UIKit/UIKit.h>
 @interface UIColor(HXTool)
-+ (UIColor *)colorWithRGBString:(NSString *)string;
-+ (UIColor *)colorWithRGBNumber:(NSUInteger )red green:(NSUInteger )green blue:(NSUInteger )blue;
-+ (UIColor *)colorWithRGBNumber:(NSUInteger)red green:(NSUInteger)green blue:(NSUInteger)blue alpha:(NSUInteger)alpha;
++ (UIColor *)hx_colorWithRGBString:(NSString *)string;
++ (UIColor *)hx_colorWithRGBNumber:(NSUInteger )red green:(NSUInteger )green blue:(NSUInteger )blue;
++ (UIColor *)hx_colorWithRGBNumber:(NSUInteger)red green:(NSUInteger)green blue:(NSUInteger)blue alpha:(NSUInteger)alpha;
 
-+ (UIColor *)randomColor;
++ (UIColor *)hx_randomColor;
 @end

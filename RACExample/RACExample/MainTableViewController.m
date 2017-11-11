@@ -50,7 +50,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor randomColor];
+    self.view.backgroundColor = [UIColor hx_randomColor];
     self.navigationItem.title = @"RAC Example";
 
 }
@@ -60,7 +60,7 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UIScreen screenHeight] / 10.0;
+    return [UIScreen hx_screenHeight] / 10.0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

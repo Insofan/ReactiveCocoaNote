@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 @interface UIButton(HXTool)
-+ (instancetype)buttonWithTitle:(NSString *)title fontSize:(CGFloat )fontSize normalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor;
++ (instancetype)hx_buttonWithTitle:(NSString *)title fontSize:(CGFloat )fontSize normalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor;
 @end
