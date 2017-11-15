@@ -21,40 +21,41 @@
 
 - (void)setupUI {
     //这种写法不行 没找出来原因
-    //[self initTextFields:_number1TextField number:1];
-    //[self initTextFields:_number2TextField number:2];
-    
+
     self.number0TextField = ({
         _number0TextField = [UITextField new];
         [self.view addSubview:_number0TextField];
+        _number0TextField.keyboardType = UIKeyboardTypeNumberPad;
         _number0TextField.backgroundColor = [UIColor whiteColor];
         _number0TextField.placeholder = @"Number 0";
         _number0TextField;
     });
-    
+
     [self.number0TextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).offset(100);
         make.size.mas_equalTo(CGSizeMake(150, 40));
         make.centerX.mas_equalTo(self.view.mas_centerX);
     }];
-    
+
     self.number1TextField = ({
         _number1TextField = [UITextField new];
         [self.view addSubview:_number1TextField];
+        _number1TextField.keyboardType = UIKeyboardTypeNumberPad;
         _number1TextField.backgroundColor = [UIColor whiteColor];
         _number1TextField.placeholder = @"Number 1";
         _number1TextField;
     });
-    
+
     [self.number1TextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).offset(200);
         make.size.mas_equalTo(CGSizeMake(150, 40));
         make.centerX.mas_equalTo(self.view.mas_centerX);
     }];
-    
+
     self.number2TextField = ({
         _number2TextField = [UITextField new];
         [self.view addSubview:_number2TextField];
+        _number2TextField.keyboardType = UIKeyboardTypeNumberPad;
         _number2TextField.backgroundColor = [UIColor whiteColor];
         _number2TextField.placeholder = @"Number 2";
         _number2TextField;
@@ -87,18 +88,20 @@
 
 /*
 - (void)initTextFields:(UITextField *)textField number:(NSUInteger )number{
-    textField = [[UITextField alloc] init];
-    [self.view addSubview:textField];
-    textField.backgroundColor = [UIColor whiteColor];
-    textField.placeholder = [NSString stringWithFormat:@"Number%ld", number];
-    
-    [textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(150, 40));
-        make.centerX.mas_equalTo(self.view.mas_centerX);
-        make.top.mas_equalTo(self.view.mas_top).offset((number + 1) * 100);
-    }];
+        textField = [[UITextField alloc] init];
+        NSLog(@"init text field %tu", number);
+        [self.view addSubview:textField];
+        textField.backgroundColor = [UIColor whiteColor];
+        textField.keyboardType = UIKeyboardTypeNumberPad;
+        //    textField.placeholder = [NSString stringWithFormat:@"Number%tu", number];
+        
+        [textField mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(150, 40));
+            make.centerX.mas_equalTo(self.view.mas_centerX);
+            make.top.mas_equalTo(self.view.mas_top).offset((number + 1) * 100);
+        }];
 }
-*/
+ */
 #pragma mark: RAC
 - (void)initialRac {
     //1创建一个信号

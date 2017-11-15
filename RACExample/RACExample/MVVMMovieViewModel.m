@@ -27,11 +27,6 @@
     if (self) {
         [self initViewModel];
 
-        /*
-        [self getDoubanList:^(NSArray<MVVMMovieModel *> *array) {
-            
-        }];
-         */
     }
     return self;
 }
@@ -64,14 +59,13 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
 
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *subjects = responseObject[@"subjects"];
-        for (NSDictionary *subject in subjects) {
-            self.movieModel = [MVVMMovieModel yy_modelWithDictionary:subject];
+        NSArray *subjects = responseObject[@"subjects"];
+        
+        [subjects hx_each:^(id obj) {
+            self.movieModel = [MVVMMovieModel yy_modelWithDictionary:obj];
             [self.movieModelArray addObject:self.movieModel];
-        }
-        
-        NSLog(@"%@", self.movieModelArray);
-        
+        }];
+
         if (sucessedBlock) {
             sucessedBlock(self.movieModelArray);
         }

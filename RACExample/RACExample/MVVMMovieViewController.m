@@ -101,6 +101,9 @@
 }
 
 - (void)bindViewModel {
+    [self.movieViewModel.command.rac_willDeallocSignal subscribeCompleted:^{
+        NSLog(@"Command disposebag");
+    }];
     @weakify(self);
     [self.movieViewModel.command.executionSignals.switchToLatest subscribeNext:^(NSArray<MVVMMovieModel *> *array) {
         @strongify(self);
@@ -110,6 +113,7 @@
     
     //执行command
     [self.movieViewModel.command execute:nil];
+    
 }
 
 

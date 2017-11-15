@@ -34,9 +34,7 @@
 
 
 - (void)testMovieAndAdd {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-    
+
     XCUIApplication *app = [[XCUIApplication alloc] init];
     XCUIElementQuery *tablesQuery = app.tables;
     [tablesQuery.staticTexts[@"7 MVVM\u5e94\u7528\u4e00"] tap];
@@ -46,26 +44,19 @@
 
     XCUIElement *number0TextField = app.textFields[@"Number 0"];
     [number0TextField tap];
-    
-    XCUIElement *moreKey = app/*@START_MENU_TOKEN@*/.keys[@"more"]/*[[".keyboards",".keys[@\"more, numbers\"]",".keys[@\"more\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/;
-    [moreKey tap];
-    [moreKey tap];
+
     [number0TextField typeText:@"4"];
-    
+
     XCUIElement *number1TextField = app.textFields[@"Number 1"];
     [number1TextField tap];
-    [moreKey tap];
-    [moreKey tap];
     [number1TextField typeText:@"6"];
-    
+
     XCUIElement *number2TextField = app.textFields[@"Number 2"];
     [number2TextField tap];
-    [moreKey tap];
-    [moreKey tap];
     [number2TextField typeText:@"8"];
     sleep(2);
     [app.navigationBars[@"2 \u52a0\u6cd5\u8ba1\u6570\u5668"].buttons[@"RAC Example"] tap];
-    
+
 }
 
 @end
