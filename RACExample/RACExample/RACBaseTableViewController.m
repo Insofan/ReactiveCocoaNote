@@ -10,6 +10,7 @@
 #import "RACBaseTableViewController.h"
 #import "RACSignalViewController.h"
 #import "RACSubjectViewController.h"
+#import "RACCommandViewController.h"
 #import "RACOperatorTableViewController.h"
 #import "RACSequenceViewController.h"
 #import "RACMacroTableViewController.h"
@@ -17,7 +18,7 @@
 
 
 @interface RACBaseTableViewController ()
-@property (strong, nonatomic) NSArray *vcArray;
+@property(strong, nonatomic) NSArray *vcArray;
 
 @end
 
@@ -27,19 +28,20 @@
 - (NSArray *)vcArray {
     if (!_vcArray) {
         _vcArray = @[
-                     @{@"key":@"1 RACSignal", @"value":[RACSignalViewController class]},
-                     @{@"key":@"2 RACSubject", @"value":[RACSubjectViewController class]},
-                     @{@"key":@"3 RACOperator", @"value":[RACOperatorTableViewController class]},
-                     @{@"key":@"4 RACSequence", @"value":
-                           [RACSequenceViewController class]},
-                     @{@"key":@"5 RACMacro", @"value":[RACMacroTableViewController class]},
-                     @{@"key":@"6 RACUIKit", @"value":[RACUIKitTableViewController class]},
-                     ];
+                @{@"key": @"1 RACSignal", @"value": [RACSignalViewController class]},
+                @{@"key": @"2 RACSubject", @"value": [RACSubjectViewController class]},
+                @{@"key": @"3 RACCommand", @"value": [RACCommandViewController class]},
+                @{@"key": @"4 RACOperator", @"value": [RACOperatorTableViewController class]},
+                @{@"key": @"5 RACSequence", @"value": [RACSequenceViewController class]},
+                @{@"key": @"6 RACMacro", @"value": [RACMacroTableViewController class]},
+                @{@"key": @"7 RACUIKit", @"value": [RACUIKitTableViewController class]},
+        ];
     }
     return _vcArray;
 }
 
 #pragma mark Life Cycle
+
 - (void)viewWillAppear:(BOOL)animated {
 }
 
@@ -49,11 +51,11 @@
 //    self.tableView.dataSource =
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier: @"baseReuse"];
-    
+
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"baseReuse"];
+
     NSLog(@"rac log :%ld", self.vcArray.count);
-    
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -71,7 +73,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UIScreen hx_screenHeight]/10.0;
+    return [UIScreen hx_screenHeight] / 10.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,10 +87,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
-    
+
     UIViewController *vc = [[_vcArray[indexPath.row][@"value"] class] new];
     vc.title = self.vcArray[indexPath.row][@"key"];
-    
+
     [self.navigationController pushViewController:vc animated:true];
 
 }

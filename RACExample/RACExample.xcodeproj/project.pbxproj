@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3166487F1BD4CBB7F09FBB98 /* RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316646F10E88F2D79FAA2ECD /* RACCommandViewController.m */; };
 		AF065A791FB093CE00165CF0 /* RACMacroRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF065A781FB093CE00165CF0 /* RACMacroRACViewController.m */; };
 		AF065A7D1FB0996700165CF0 /* RACMacroRACObserveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF065A7C1FB0996700165CF0 /* RACMacroRACObserveViewController.m */; };
 		AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF087FF31E449050009F5B66 /* FirstViewController.m */; };
@@ -80,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		02D84EAE9602782D007DE3D0 /* Pods-RACExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACExample/Pods-RACExample.debug.xcconfig"; sourceTree = "<group>"; };
+		316646F10E88F2D79FAA2ECD /* RACCommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACCommandViewController.m; sourceTree = "<group>"; };
+		316648C3F69EA2C37C743365 /* RACCommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACCommandViewController.h; sourceTree = "<group>"; };
 		4E931184B8F00A3587A4C109 /* libPods-RACExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF065A771FB093CE00165CF0 /* RACMacroRACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMacroRACViewController.h; sourceTree = "<group>"; };
 		AF065A781FB093CE00165CF0 /* RACMacroRACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACMacroRACViewController.m; sourceTree = "<group>"; };
@@ -220,6 +223,15 @@
 				DACAE99B8B63D3A4CE77267E /* Pods-RACExample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		31664433EEA00DE8B1D64371 /* RACCommand */ = {
+			isa = PBXGroup;
+			children = (
+				316646F10E88F2D79FAA2ECD /* RACCommandViewController.m */,
+				316648C3F69EA2C37C743365 /* RACCommandViewController.h */,
+			);
+			name = RACCommand;
 			sourceTree = "<group>";
 		};
 		AF065A761FB0939500165CF0 /* RAC */ = {
@@ -662,6 +674,7 @@
 				E6B2DE2A206892A70043CF3C /* RACSequence */,
 				AFA761CF1FB0910400B4845C /* RACMacro */,
 				AF7E5A371FB162540067E323 /* UIKitCategory */,
+				31664433EEA00DE8B1D64371 /* RACCommand */,
 			);
 			name = RACBase;
 			sourceTree = "<group>";
@@ -938,6 +951,7 @@
 				AFB157D01FB2ABE800BFB45D /* RACOperatorTakeLastViewController.m in Sources */,
 				AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */,
 				AF585E531FB2FE2E007F55E0 /* MVVMMovieCollectionViewCell.m in Sources */,
+				3166487F1BD4CBB7F09FBB98 /* RACCommandViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

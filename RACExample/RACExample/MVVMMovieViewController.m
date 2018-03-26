@@ -11,6 +11,7 @@
 #import "MVVMMovieCollectionViewCell.h"
 #import "MVVMMovieModel.h"
 #import "MVVMMovieViewModel.h"
+#import <JGProgressHUD.h>
 
 #import <SDWebImage/UIImageView+WebCache.h>
 
@@ -92,7 +93,6 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupUI];
-    self.sessionManager = [NetManager sharedNetManager];
     self.movieViewModel = [MVVMMovieViewModel new];
     self.movieModel = [MVVMMovieModel new];
     
@@ -105,10 +105,16 @@
         NSLog(@"Command disposebag");
     }];
     @weakify(self);
+    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    HUD.textLabel.text = @"Loading";
+    [HUD showInView:self.view];
     [self.movieViewModel.command.executionSignals.switchToLatest subscribeNext:^(NSArray<MVVMMovieModel *> *array) {
         @strongify(self);
         self.movieModelArray = array;
-        [self.collectionView reloadData];
+        [[RACScheduler mainThreadScheduler] schedule:^{
+            [self.collectionView reloadData];
+            [HUD dismissAnimated:true];
+        }];
     }];
     
     //执行command
