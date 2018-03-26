@@ -56,6 +56,8 @@
 		AFB157DD1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB157DC1FB2B36B00BFB45D /* RACOperatorDoNextCompletedViewController.m */; };
 		AFE96A391FAF5BA500536984 /* RACBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE96A381FAF5BA500536984 /* RACBaseTableViewController.m */; };
 		AFF6610B1E449D260087CC8F /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF6610A1E449D260087CC8F /* SearchTableViewController.m */; };
+		E6B2DE2D206894070043CF3C /* RACSequenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B2DE2C206894070043CF3C /* RACSequenceViewController.m */; };
+		E6B2DE2F206895640043CF3C /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6B2DE2E206895640043CF3C /* flags.plist */; };
 		F15391DEB3C23A9797BEE8AA /* libPods-RACExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E931184B8F00A3587A4C109 /* libPods-RACExample.a */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +181,9 @@
 		AFF661091E449D260087CC8F /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
 		AFF6610A1E449D260087CC8F /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		DACAE99B8B63D3A4CE77267E /* Pods-RACExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACExample/Pods-RACExample.release.xcconfig"; sourceTree = "<group>"; };
+		E6B2DE2B206894070043CF3C /* RACSequenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACSequenceViewController.h; sourceTree = "<group>"; };
+		E6B2DE2C206894070043CF3C /* RACSequenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSequenceViewController.m; sourceTree = "<group>"; };
+		E6B2DE2E206895640043CF3C /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,6 +502,7 @@
 				AF9B33331E4385FA0031DF5B /* MainTableViewController.m */,
 				AF9B33351E4388A30031DF5B /* Header.pch */,
 				AFE96A3D1FAF5C8700536984 /* Macros.h */,
+				E6B2DE2E206895640043CF3C /* flags.plist */,
 				AF9B33271E4385CD0031DF5B /* Assets.xcassets */,
 				AF9B33291E4385CD0031DF5B /* LaunchScreen.storyboard */,
 				AF9B332C1E4385CD0031DF5B /* Info.plist */,
@@ -582,9 +588,9 @@
 			children = (
 				AFA761D01FB0914100B4845C /* RACMacroTableViewController.h */,
 				AFA761D11FB0914100B4845C /* RACMacroTableViewController.m */,
+				AF5FB6621FB09FE100C05CFE /* RACTuplePack */,
 				AF065A761FB0939500165CF0 /* RAC */,
 				AF065A7A1FB098E300165CF0 /* RACObserve */,
-				AF5FB6621FB09FE100C05CFE /* RACTuplePack */,
 			);
 			name = RACMacro;
 			sourceTree = "<group>";
@@ -653,6 +659,7 @@
 				AF2199EA1FAF86820025B73A /* RACSignal */,
 				AF0D74F11FAFF06C003B332B /* RACSubject */,
 				AF0D74F51FB0117E003B332B /* RACOperator */,
+				E6B2DE2A206892A70043CF3C /* RACSequence */,
 				AFA761CF1FB0910400B4845C /* RACMacro */,
 				AF7E5A371FB162540067E323 /* UIKitCategory */,
 			);
@@ -666,6 +673,15 @@
 				AF1BE7771FB03EC300C85C57 /* Reveal.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6B2DE2A206892A70043CF3C /* RACSequence */ = {
+			isa = PBXGroup;
+			children = (
+				E6B2DE2B206894070043CF3C /* RACSequenceViewController.h */,
+				E6B2DE2C206894070043CF3C /* RACSequenceViewController.m */,
+			);
+			name = RACSequence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -794,6 +810,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B2DE2F206895640043CF3C /* flags.plist in Resources */,
 				AF9B332B1E4385CD0031DF5B /* LaunchScreen.storyboard in Resources */,
 				AF9B33281E4385CD0031DF5B /* Assets.xcassets in Resources */,
 			);
@@ -905,6 +922,7 @@
 				AF0D75001FB01D8E003B332B /* RACOperatorFlattenMapViewController.m in Sources */,
 				AFA365D11FB05B6E00914A6C /* RACOperatorReduceViewController.m in Sources */,
 				AFB157CC1FB2A9BD00BFB45D /* RACOperatorTakeViewController.m in Sources */,
+				E6B2DE2D206894070043CF3C /* RACSequenceViewController.m in Sources */,
 				AF585E481FB2F2A8007F55E0 /* MVVMMovieViewController.m in Sources */,
 				AF5FB6651FB09FFD00C05CFE /* RACMacroRACTuplePackViewController.m in Sources */,
 				AFB157D81FB2B14500BFB45D /* RACOperatorSwitchToLatestViewController.m in Sources */,
