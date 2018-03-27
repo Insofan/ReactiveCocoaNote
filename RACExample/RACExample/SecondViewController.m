@@ -16,7 +16,6 @@
 @implementation SecondViewController
 #pragma mark: setupUI
 - (void)setupUI {
-    @weakify(self);
     self.textField = ({
         _textField = [UITextField new];
         [self.view addSubview:_textField];
@@ -52,9 +51,7 @@
 - (void)sendBack {
     //1.subject send value
     //内存管理
-    [self.subject.rac_willDeallocSignal subscribeCompleted:^{
-        NSLog(@"subject completed");
-    }];
+
     [self.subject sendNext:self.textField.text];
     [self.subject sendCompleted];
     

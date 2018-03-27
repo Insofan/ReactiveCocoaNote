@@ -8,39 +8,39 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+
 @interface FirstViewController ()
-@property (strong, nonatomic) UILabel *label;
+@property(strong, nonatomic) UILabel *label;
 @end
 
 @implementation FirstViewController
 
 #pragma mark: setupUI
+
 - (void)setupUI {
     UIBarButtonItem *rightBarButtonItem = ({
         rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Second" style:UIBarButtonItemStylePlain target:self action:@selector(barButtonAction)];
         rightBarButtonItem;
     });
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
-   
-    @weakify(self);
+
     self.label = ({
         _label = [UILabel new];
         [self.view addSubview:_label];
         _label.backgroundColor = [UIColor whiteColor];
-        _label.textAlignment = NSTextAlignmentCenter;
-        _label.text = @"Call Back Label";
+        _label.textAlignment   = NSTextAlignmentCenter;
+        _label.text            = @"Call Back Label";
         [_label setTextColor:[UIColor blackColor]];
         _label;
     });
-    
+
     [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.mas_equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(240, 60));
     }];
-    
-    
-}
 
+
+}
 
 
 - (void)barButtonAction {
@@ -49,17 +49,10 @@
     //2. alloc init subject
     vc.subject = [RACSubject subject];
     //3. subscribeNext 订阅
-    //内存管理
-    [vc.subject.rac_willDeallocSignal subscribeCompleted:^{
-        NSLog(@"first subject dealloc");
-               }] ;
-    @weakify(self);
-    [vc.subject subscribeNext:^(NSString* text) {
-        @strongify(self);
+    [vc.subject subscribeNext:^(NSString *text) {
         self.label.text = text;
     }];
-    
-    [vc.subject sendCompleted];
+
 }
 
 - (void)viewDidLoad {

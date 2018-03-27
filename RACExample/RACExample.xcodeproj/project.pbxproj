@@ -297,6 +297,7 @@
 			children = (
 				AF0D74F61FB011C6003B332B /* RACOperatorTableViewController.h */,
 				AF0D74F71FB011C6003B332B /* RACOperatorTableViewController.m */,
+				E612FBC7206A3016007EB124 /* bind */,
 				AF0D74F91FB015EA003B332B /* map */,
 				AF0D74FD1FB01D6C003B332B /* flattenMap */,
 				AF0D75011FB03387003B332B /* concat */,
@@ -686,6 +687,13 @@
 				AF1BE7771FB03EC300C85C57 /* Reveal.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E612FBC7206A3016007EB124 /* bind */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = bind;
 			sourceTree = "<group>";
 		};
 		E6B2DE2A206892A70043CF3C /* RACSequence */ = {

@@ -59,7 +59,7 @@
 
 - (void)concat {
     
-    //concat有顺序的拼接信号，必须要等到第一个signal complete后第二个signal才会被订阅，注意第一个signal中的sendCompleted
+    //concat有顺序的拼接信号，必须要等到第一个signal complete后第二个signal才会被订阅，注意第一个signal中的sendCompleted, 但在fmdb中使用then和concat会造成死锁, 说明信号并没有全部完成, 需要flattenMap让信号真正完成,fmdb才不会形成 inDatabase 套 inDatabase的死锁情况
     RACSignal *signalOne = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"signal one"];
         [subscriber sendCompleted];
