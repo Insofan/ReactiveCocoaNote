@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		316641BA8B713952189FF77C /* CircleCountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31664B5B25D182A8BE2232E3 /* CircleCountdownViewController.m */; };
+		316642AD23F4305D10B5B525 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316643B5FCFD7A802F9DB2AE /* BaseViewController.m */; };
 		3166487F1BD4CBB7F09FBB98 /* RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316646F10E88F2D79FAA2ECD /* RACCommandViewController.m */; };
+		31664CDDCB757DF8A317E91D /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31664CE322036B98D09E1D9B /* CircleView.m */; };
 		AF065A791FB093CE00165CF0 /* RACMacroRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF065A781FB093CE00165CF0 /* RACMacroRACViewController.m */; };
 		AF065A7D1FB0996700165CF0 /* RACMacroRACObserveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF065A7C1FB0996700165CF0 /* RACMacroRACObserveViewController.m */; };
 		AF087FF41E449050009F5B66 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF087FF31E449050009F5B66 /* FirstViewController.m */; };
@@ -81,8 +84,14 @@
 
 /* Begin PBXFileReference section */
 		02D84EAE9602782D007DE3D0 /* Pods-RACExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACExample/Pods-RACExample.debug.xcconfig"; sourceTree = "<group>"; };
+		316643B5FCFD7A802F9DB2AE /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Utils/BaseViewController.m; sourceTree = "<group>"; };
+		31664557BE2E295B320CE079 /* CircleCountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCountdownViewController.h; sourceTree = "<group>"; };
 		316646F10E88F2D79FAA2ECD /* RACCommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACCommandViewController.m; sourceTree = "<group>"; };
+		31664720B417BDA77A1A9BA6 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		316648C3F69EA2C37C743365 /* RACCommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACCommandViewController.h; sourceTree = "<group>"; };
+		31664B5B25D182A8BE2232E3 /* CircleCountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCountdownViewController.m; sourceTree = "<group>"; };
+		31664C7DE37427B6F5495542 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Utils/BaseViewController.h; sourceTree = "<group>"; };
+		31664CE322036B98D09E1D9B /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		4E931184B8F00A3587A4C109 /* libPods-RACExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF065A771FB093CE00165CF0 /* RACMacroRACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMacroRACViewController.h; sourceTree = "<group>"; };
 		AF065A781FB093CE00165CF0 /* RACMacroRACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACMacroRACViewController.m; sourceTree = "<group>"; };
@@ -232,6 +241,17 @@
 				316648C3F69EA2C37C743365 /* RACCommandViewController.h */,
 			);
 			name = RACCommand;
+			sourceTree = "<group>";
+		};
+		3166481745BC93FE9277BDAA /* Circle Countdown */ = {
+			isa = PBXGroup;
+			children = (
+				31664B5B25D182A8BE2232E3 /* CircleCountdownViewController.m */,
+				31664557BE2E295B320CE079 /* CircleCountdownViewController.h */,
+				31664CE322036B98D09E1D9B /* CircleView.m */,
+				31664720B417BDA77A1A9BA6 /* CircleView.h */,
+			);
+			path = "Circle Countdown";
 			sourceTree = "<group>";
 		};
 		AF065A761FB0939500165CF0 /* RAC */ = {
@@ -388,6 +408,8 @@
 			children = (
 				AF585E4A1FB2F481007F55E0 /* NetManager.h */,
 				AF585E4B1FB2F481007F55E0 /* NetManager.m */,
+				316643B5FCFD7A802F9DB2AE /* BaseViewController.m */,
+				31664C7DE37427B6F5495542 /* BaseViewController.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -502,6 +524,7 @@
 				AF585E451FB2F222007F55E0 /* MVVM */,
 				AF585E491FB2F320007F55E0 /* Common */,
 				AF9B331B1E4385CD0031DF5B /* Supporting Files */,
+				3166481745BC93FE9277BDAA /* Circle Countdown */,
 			);
 			path = RACExample;
 			sourceTree = "<group>";
@@ -960,6 +983,9 @@
 				AFA6D7A51E45B47D00FA4CC3 /* UserModel.m in Sources */,
 				AF585E531FB2FE2E007F55E0 /* MVVMMovieCollectionViewCell.m in Sources */,
 				3166487F1BD4CBB7F09FBB98 /* RACCommandViewController.m in Sources */,
+				316641BA8B713952189FF77C /* CircleCountdownViewController.m in Sources */,
+				316642AD23F4305D10B5B525 /* BaseViewController.m in Sources */,
+				31664CDDCB757DF8A317E91D /* CircleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
